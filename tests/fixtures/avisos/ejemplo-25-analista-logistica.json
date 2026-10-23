@@ -1,0 +1,43 @@
+{
+  "id": "ejemplo-25-analista-logistica",
+  "origen": "ejemplo",
+  "segmento": "administrativo",
+  "texto": "Analista de Logística Sr.\n\nSobre nosotros\nSomos una empresa líder en distribución con presencia en todo el país.\n\nResponsabilidades\n- Coordinar la distribución diaria y la planificación de rutas\n- Elaborar reportes de indicadores en Excel y Power BI\n- Gestionar la relación con transportistas y proveedores\n\nRequisitos\n- Título de grado en Logística, Ingeniería Industrial o afines\n- Experiencia mínima de 3 años en logística de distribución (imprescindible)\n- Manejo avanzado de Excel (imprescindible)\n- Conocimiento de WMS y SAP (valorable)\n- Disponibilidad para viajar ocasionalmente\n- Licencia de conducir (valorable)\n- Inglés intermedio\n\nQué ofrecemos\n- Trabajo híbrido, obra social, bono anual",
+  "requisitos": [
+    {
+      "fragmento": "Título de grado en Logística, Ingeniería Industrial o afines",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Experiencia mínima de 3 años en logística de distribución (imprescindible)",
+      "tipo": "tarea",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Manejo avanzado de Excel (imprescindible)",
+      "tipo": "herramienta",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Conocimiento de WMS y SAP (valorable)",
+      "tipo": "herramienta",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "Disponibilidad para viajar ocasionalmente",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Licencia de conducir (valorable)",
+      "tipo": "condicion",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "Inglés intermedio",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "ejemplo-36-mecanico-taller",
+  "origen": "ejemplo",
+  "segmento": "oficios",
+  "texto": "TALLER MECÁNICO ZONA SUR BUSCA MECÁNICO/A CON EXPERIENCIA\nRequisitos: experiencia en mecánica ligera y frenos, manejo de scanner y herramientas de taller, herramientas propias deseable, disponibilidad horaria de lunes a sábados, carnet de conducir.\nOfrecemos buen ambiente de trabajo, sueldo por encima del convenio y capacitación continua.",
+  "requisitos": [
+    {
+      "fragmento": "experiencia en mecánica ligera y frenos",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "manejo de scanner y herramientas de taller",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "herramientas propias deseable",
+      "tipo": "condicion",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "disponibilidad horaria de lunes a sábados",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "carnet de conducir",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    }
+  ]
+}

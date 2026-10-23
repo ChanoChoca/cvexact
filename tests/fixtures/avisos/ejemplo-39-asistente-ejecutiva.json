@@ -1,0 +1,48 @@
+{
+  "id": "ejemplo-39-asistente-ejecutiva",
+  "origen": "ejemplo",
+  "segmento": "administrativo",
+  "texto": "Importante multinacional busca Asistente Ejecutiva para Gerencia General.\n\nBuscamos una persona con sólida experiencia como asistente de dirección, con excelente nivel de inglés (bilingüe), manejo avanzado del paquete Office y capacidad de organización de agendas y viajes. Se requiere título terciario o universitario. Será un plus contar con conocimientos de SAP. Excelente presencia y discreción absoluta.\n\nHorario de lunes a viernes de 9 a 18 hs. Ubicación: Puerto Madero.",
+  "requisitos": [
+    {
+      "fragmento": "sólida experiencia como asistente de dirección",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "excelente nivel de inglés (bilingüe)",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "manejo avanzado del paquete Office",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "capacidad de organización de agendas y viajes",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "título terciario o universitario",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Será un plus contar con conocimientos de SAP",
+      "tipo": "herramienta",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "Excelente presencia",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "discreción absoluta",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    }
+  ]
+}

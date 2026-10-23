@@ -1,0 +1,43 @@
+{
+  "id": "ejemplo-37-disenador-ux-ui",
+  "origen": "ejemplo",
+  "segmento": "tecnico",
+  "texto": "Diseñador/a UX/UI Semi Senior\n\nSumate a nuestro equipo de producto para diseñar experiencias digitales para una fintech.\n\nQué necesitamos:\n- +3 años de experiencia diseñando productos digitales\n- Dominio de Figma y sistemas de diseño\n- Experiencia en research con usuarios (entrevistas, tests de usabilidad)\n- Portfolio con casos reales (obligatorio)\n- Inglés conversacional\n- Trabajo colaborativo con desarrollo y producto\n\nSuma: conocimientos de HTML/CSS y Notion.",
+  "requisitos": [
+    {
+      "fragmento": "+3 años de experiencia diseñando productos digitales",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Dominio de Figma y sistemas de diseño",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Experiencia en research con usuarios (entrevistas, tests de usabilidad)",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Portfolio con casos reales (obligatorio)",
+      "tipo": "otro",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Inglés conversacional",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Trabajo colaborativo con desarrollo y producto",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Suma: conocimientos de HTML/CSS y Notion",
+      "tipo": "herramienta",
+      "obligatoriedad": "deseable"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+# Autoalojamiento de cvexact: la app, Postgres y un Chromium para el PDF.
+#
+# No es la topología de cvexact.com: es la forma corta de levantar una instancia
+# propia. Desde la raíz del repositorio:
+#
+#   cp .env.example .env
+#   # completar POSTGRES_PASSWORD, BETTER_AUTH_SECRET, BETTER_AUTH_URL y
+#   # NEXT_PUBLIC_SITE_URL
+#   docker compose -f deploy/docker-compose.yml --env-file .env up -d --build
+#
+# La guía completa, con qué es obligatorio y qué no, está en docs/SELF-HOSTING.md.
+
+name: cvexact
+
+services:
+  postgres:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_USER: cvexact
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?definí POSTGRES_PASSWORD en .env}
+      POSTGRES_DB: cvexact
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cvexact -d cvexact"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+
+  # El PDF se genera en Chromium, fuera de la imagen de la app (ver
+  # lib/export/pdf.ts). Sólo habla con la app por la red interna: no publicar
+  # el 9222.
+  chromium:
+    image: zenika/alpine-chrome:124
+    command:
+      - --no-sandbox
+      - --disable-dev-shm-usage
+      - --disable-gpu
+      - --remote-debugging-address=0.0.0.0
+      - --remote-debugging-port=9222
+      - --remote-allow-origins=*
+    shm_size: 512mb
+    restart: unless-stopped
+
+  # Aplica las migraciones y sale. La app no arranca hasta que termina.
+  migrate:
+    build:
+      context: ..
+      target: migrator
+    environment:
+      DATABASE_URL: postgres://cvexact:${POSTGRES_PASSWORD}@postgres:5432/cvexact
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: "no"
+
+  app:
+    build:
+      context: ..
+      target: runner
+      # Se inlinea en `next build`; no alcanza con definirla sólo en `environment`
+      # o `env_file` del runtime. Compose interpola este valor desde `.env`
+      # (`--env-file .env`) o desde el entorno del comando:
+      #
+      #   NEXT_PUBLIC_SOURCE_URL=... docker compose --env-file .env build app
+      #
+      # Vacía = build sin enlace AGPL (válido para desarrollo; no para una
+      # instancia pública).
+      args:
+        NEXT_PUBLIC_SOURCE_URL: ${NEXT_PUBLIC_SOURCE_URL:-}
+    env_file:
+      - ../.env
+    environment:
+      # El `.env` de desarrollo apunta a localhost; adentro de compose la base
+      # es el servicio `postgres`.
+      DATABASE_URL: postgres://cvexact:${POSTGRES_PASSWORD}@postgres:5432/cvexact
+      BROWSER_WS_URL: http://chromium:9222
+    ports:
+      - "3000:3000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+      chromium:
+        condition: service_started
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/api/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  postgres-data:

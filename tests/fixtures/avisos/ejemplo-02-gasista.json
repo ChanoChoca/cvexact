@@ -1,0 +1,38 @@
+{
+  "id": "ejemplo-02-gasista",
+  "origen": "ejemplo",
+  "segmento": "oficios",
+  "texto": "Gasista matriculado/a - CABA y GBA\n\nEmpresa instaladora de gas busca gasista para instalaciones domiciliarias y de comercios.\n\nSe requiere:\n* Matrícula de gasista de 1ª o 2ª categoría vigente (excluyente)\n* Experiencia comprobable en instalaciones domiciliarias\n* Licencia de conducir B1 y movilidad propia\n* Disponibilidad horaria completa, incluso sábados\n* Buen trato con el cliente\n* Se valorará curso de soldadura\n\nCondiciones:\nRemuneración a convenir según experiencia. Zona de trabajo: CABA y zona norte.",
+  "requisitos": [
+    {
+      "fragmento": "Matrícula de gasista de 1ª o 2ª categoría vigente (excluyente)",
+      "tipo": "credencial",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Experiencia comprobable en instalaciones domiciliarias",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Licencia de conducir B1 y movilidad propia",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Disponibilidad horaria completa, incluso sábados",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Buen trato con el cliente",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Se valorará curso de soldadura",
+      "tipo": "credencial",
+      "obligatoriedad": "deseable"
+    }
+  ]
+}

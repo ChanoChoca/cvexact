@@ -1,0 +1,33 @@
+{
+  "id": "ejemplo-32-profesor-ingles",
+  "origen": "ejemplo",
+  "segmento": "oficios",
+  "texto": "Instituto de idiomas en Belgrano necesita profesor/a de inglés para niños y adolescentes.\n\nSe solicita profesorado de inglés o certificación internacional (FCE, CAE o superior). Experiencia dando clases a menores. Manejo de plataformas virtuales (Zoom, Google Classroom). Disponibilidad de martes y jueves por la tarde. Se valorará conocimiento de portugués.\n\nEnviar CV con carta de presentación.",
+  "requisitos": [
+    {
+      "fragmento": "profesorado de inglés o certificación internacional (FCE, CAE o superior)",
+      "tipo": "credencial",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Experiencia dando clases a menores",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Manejo de plataformas virtuales (Zoom, Google Classroom)",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Disponibilidad de martes y jueves por la tarde",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Se valorará conocimiento de portugués",
+      "tipo": "otro",
+      "obligatoriedad": "deseable"
+    }
+  ]
+}

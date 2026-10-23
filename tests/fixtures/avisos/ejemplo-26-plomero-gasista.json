@@ -1,0 +1,23 @@
+{
+  "id": "ejemplo-26-plomero-gasista",
+  "origen": "ejemplo",
+  "segmento": "oficios",
+  "texto": "Se busca plomero/gasista con experiencia en obra y mantenimiento de edificios. Debe contar con herramientas propias y movilidad propia. Matrícula de gasista excluyente. Zona Oeste (Morón, Ituzaingó, Castelar). Pago semanal. Consultas por WhatsApp.",
+  "requisitos": [
+    {
+      "fragmento": "experiencia en obra y mantenimiento de edificios",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Debe contar con herramientas propias y movilidad propia",
+      "tipo": "condicion",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Matrícula de gasista excluyente",
+      "tipo": "credencial",
+      "obligatoriedad": "excluyente"
+    }
+  ]
+}

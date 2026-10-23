@@ -1,0 +1,407 @@
+@import "tailwindcss";
+
+/*
+ * App chrome only. The CV and interview documents carry their own stylesheets
+ * (components/cv/cv-document.css, components/prep/prep-document.css) and must
+ * not inherit anything from here — they have to render identically whatever the
+ * app looks like.
+ */
+
+@theme {
+  /*
+   * "Solar" is the app's only identity now — it used to be "Podio" (warm
+   * paper, warm near-black, one gold), the palette this app wore before the
+   * whole product was rethemed to match the landing (`app/page.tsx`). The
+   * token *names* below are kept as-is — `paper`, `ink`, `oro` — so every
+   * consumer across the app keeps working unchanged; only the *values*
+   * moved to Solar's near-black. See `--color-solar-*` further down for the
+   * literal palette these now alias.
+   *
+   * `oro` aliases `solar-g3`, the one accent in the four-stop ramp saturated
+   * enough to carry text on `#01020c` — `g1`/`g2` read as too pale, `g4` is
+   * reserved for the primary-action fill. `oro-soft` aliases `solar-g4` for
+   * washes, rules and hovers — never set as text colour.
+   */
+  --color-paper: #01020c;
+  --color-paper-2: #0a0c18;
+  --color-ink: #ffffff;
+  --color-ink-2: #a49eb6;
+  --color-ink-3: #7f7994;
+  --color-oro: #b166d8;
+  --color-oro-soft: #7f66f0;
+  --color-rule: rgb(255 255 255 / 0.07);
+
+  /*
+   * `font-podio` used to alias Archivo; now it aliases the plain system sans
+   * stack (`--font-sans`, Tailwind's own default) instead — the same body
+   * font the landing's root (`app/page.tsx`) sets directly as `font-sans`.
+   * Named rather than just switching every consumer to `font-sans` outright,
+   * so the six root wrappers that set `font-podio` (`AppShell`, the shared
+   * Podio public-page root, `legal/parts.tsx`) keep working unedited, and so
+   * this stays scoped to app chrome — overriding `--font-sans` itself would
+   * also restyle the print shells, which must render in STIX regardless of
+   * what the app around them wears. Archivo itself no longer loads at all
+   * (`app/layout.tsx`) — nothing referenced `--font-archivo` once this
+   * pointed elsewhere.
+   */
+  --font-podio: var(--font-sans);
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+
+  /*
+   * "Solar" — ported from the landing redesign (`components/landing/solar/`)
+   * and now the palette the whole app aliases above. Kept as its own set of
+   * `--color-solar-*` tokens (rather than folded away) because the Solar
+   * landing's own components (`components/landing/solar/**`) reference these
+   * names directly, and because `g1`/`g2` have no `paper`/`ink`/`oro` alias
+   * of their own — they're only ever reached by name.
+   */
+  --color-solar-bg: #01020c;
+  --color-solar-ink: #ffffff;
+  --color-solar-ink-2: #f2f0f7;
+  --color-solar-link: #cfc9dd;
+  --color-solar-muted: #a49eb6;
+  --color-solar-muted-2: #7f7994;
+  --color-solar-label: #5f5a74;
+  --color-solar-g1: #e9b57e;
+  --color-solar-g2: #cf959e;
+  --color-solar-g3: #b166d8;
+  --color-solar-g4: #7f66f0;
+
+  /* The two recurring gradients, tokenised rather than repeated inline: one
+     for gradient-clipped emphasis words in headings, one (steeper, 3-stop)
+     for the wordmark's logo glyph. */
+  --gradient-solar-text: linear-gradient(
+    38deg,
+    var(--color-solar-g1) 0%,
+    var(--color-solar-g2) 30%,
+    var(--color-solar-g3) 62%,
+    var(--color-solar-g4) 100%
+  );
+  --gradient-solar-mark: linear-gradient(
+    45deg,
+    var(--color-solar-g1),
+    var(--color-solar-g3) 55%,
+    var(--color-solar-g4)
+  );
+
+  /* Uppercase/tracked chrome text only (nav, buttons, labels) — headings and
+     body copy in the Solar landing use a plain system stack, same split the
+     source mockup uses. */
+  --font-solar: var(--font-barlow), system-ui, sans-serif;
+
+  /*
+   * Where the app stops being a phone's. The top bar sets the number: the mark,
+   * «Empleos», «Postulaciones», the balance, «Postular» and «Cuenta» fit in one
+   * row down to 46rem (736 px) and start to run into each other below it — so
+   * from here up the bar shows its links, and under it the bottom tab bar takes
+   * over. Everything that depends on that switch (the links, the tab bar, and
+   * what floats clear of it) uses this one breakpoint (`chrome:`); a `sm:`
+   * left in the app is content — grids, reading widths — and not chrome.
+   */
+  --breakpoint-chrome: 46rem;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+/*
+ * One scrollbar style app-wide, no per-container variants — same policy as
+ * every other piece of chrome (buttons, borders, the focus ring below).
+ * `scrollbar-color` on `html` inherits to every scroll container for free;
+ * the `::-webkit-scrollbar` block is the fallback for engines that don't
+ * support the standard property yet. `ink-3` reads on both `paper`/`paper-2`
+ * and on `CVPreview`'s white background since it's a mid-tone, not a near-
+ * black or near-white one — no separate light-mode exception needed.
+ */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-ink-3) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-ink-3);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-oro-soft);
+}
+
+/*
+ * Focus ring that is visible on every surface in the app. `solar-g4` rather
+ * than `oro` (= `solar-g3`): a ring needs to read at a glance against
+ * whatever it lands on, including a `g3`-coloured control itself, and `g4` is
+ * the more saturated of the two — `oro`'s job is text contrast, not this.
+ */
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-solar-g4);
+  outline-offset: 3px;
+}
+
+/*
+ * The part of the page the tour of Postular is talking about (`components/wizard/PostularGuide.tsx` puts the mark on it). An outline, so that it takes no room
+ * and moves nothing, and on the part itself, so that it follows it wherever the wizard puts it. `oro` and not the ring's `g4`: it must not pass for focus.
+ */
+[data-tour-on] {
+  outline: 2px solid var(--color-oro);
+  outline-offset: 6px;
+}
+
+/*
+ * Buttons are clickable, so the pointer says so — everywhere, including the
+ * raw `<button>` elements scattered through the app that never went through
+ * the shared `Button`. Gated on `:not(:disabled)` so the shared Button's
+ * `disabled:cursor-not-allowed` still wins on a disabled control (a class
+ * selector out-specifies this element selector), and so a button the app
+ * renders as non-interactive doesn't promise a click it can't deliver.
+ * Clickable non-button elements keep their own cursors: the draggable
+ * application card (`cursor-grab`) is a div with `role="button"`, and this
+ * deliberately doesn't touch it.
+ */
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+/*
+ * Click-to-toggle and click-to-open controls say it with the pointer too:
+ * checkboxes and radios open no text caret, so the I-beam argument that keeps
+ * `Input`, `Textarea` and `SecretInput` on the text cursor doesn't apply to
+ * them; `select` is a click-to-open control like the buttons above; and
+ * `<summary>` is the disclosure toggle every `<details>` hangs off (the
+ * per-call-site `cursor-pointer` classes predate this rule and now just
+ * repeat it). Labels that own one of these toggles inherit the pointer, so
+ * hovering the label text promises the click it delivers (`Field` wrapping a
+ * text `Input` keeps the default cursor, as it should). A `<label for>`
+ * pointing at a control it doesn't contain can't be reached from CSS — the
+ * skill rows in `components/wizard/panels.tsx` carry `cursor-pointer` on
+ * their label by hand for exactly that reason.
+ */
+input[type="checkbox"]:not(:disabled),
+input[type="radio"]:not(:disabled),
+select:not(:disabled),
+summary,
+label:has(input[type="checkbox"]),
+label:has(input[type="radio"]),
+label:has(select) {
+  cursor: pointer;
+}
+
+/*
+ * `<option>` doesn't inherit React className and this app never gave it its
+ * own color/background — without that, the browser draws the <select>'s
+ * popup with its own native theme (`color-scheme: dark` above), which in
+ * practice leaves text and background barely distinguishable. `paper-2`
+ * (elevated surface) + `ink` as the resting state, and `oro-soft` (the
+ * accent already reserved for hovers, never text) inverted with `paper`
+ * for the highlighted/selected row.
+ */
+select option {
+  background-color: var(--color-paper-2);
+  color: var(--color-ink);
+}
+
+select option:checked,
+select option:hover {
+  background-color: var(--color-oro-soft);
+  color: var(--color-paper);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/*
+ * Scroll-driven reveals, with no JavaScript and therefore no hydration cost and
+ * no flash of hidden content: `view()` resolves against the element's own
+ * position, so anything already on screen at load is past the range and renders
+ * final. Browsers without scroll-driven animations never enter the block and
+ * get the static page, which is the same page minus the fade.
+ *
+ * Only applied below the fold. The hero must be painted the instant it exists.
+ */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    [data-reveal] {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 12% entry 78%;
+    }
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/*
+ * The hairline under the fixed navbar, drawn only once the page has moved. On
+ * browsers without a scroll timeline the rule is simply always there.
+ */
+@supports (animation-timeline: scroll()) {
+  [data-nav-rule] {
+    animation: nav-rule linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 96px;
+  }
+}
+
+@keyframes nav-rule {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*
+ * The three keyframes from the design reference (`cvexact Landing.dc.html`'s
+ * `<helmet><style>`), verbatim — `pulseDot` is dropped, it's dead CSS there
+ * too (defined, never referenced by any element). All three are decorative
+ * loops, not entrances, so they're reduced-motion-gated but have no
+ * meaningful "static" fallback frame to hold instead — hidden under
+ * `prefers-reduced-motion` is the correct degrade, not a contradiction of
+ * `[data-reveal]`'s approach above (that one hides content, this only stops
+ * chrome from moving).
+ */
+
+/*
+ * The nav's sweeping hairline. The gradient's own geometry lives here (both
+ * navs just drop an empty `[data-solar-sweep]` div). One wave per viewport
+ * width, like the original inline gradient: the element is 200% of its
+ * overflow-hidden strip and the pattern repeats every 50% of that (= one
+ * viewport). The element starts one full period off to the left, so the
+ * viewport stays covered edge to edge for the whole cycle — as a wave exits
+ * right, the identical one enters left. The same rule sits outside the motion
+ * media query on purpose: with `prefers-reduced-motion` the animation is
+ * dropped but the same static line stays, matching the previous
+ * inline-gradient markup's degrade.
+ */
+[data-solar-sweep] {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 15%,
+    var(--color-solar-g3) 25%,
+    transparent 35%,
+    transparent 50%
+  );
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-solar-sweep] {
+    animation: solar-sweep 7s linear infinite;
+  }
+  [data-solar-float] {
+    animation: solar-float 9s ease-in-out infinite;
+  }
+  [data-solar-marquee] {
+    animation: solar-marquee 1.1s linear infinite;
+    animation-play-state: paused;
+  }
+}
+
+@keyframes solar-sweep {
+  from {
+    /* -50% of a 200%-wide element = exactly one gradient period (one
+       viewport), so the cycle's last frame is identical to its first — an
+       infinite loop with no visible seam. translateX percentages resolve
+       against the element's own width, not the viewport. */
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes solar-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes solar-marquee {
+  from {
+    transform: translateX(-52px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/*
+ * Liquid glass: `oro-soft` fading into `oro`, a pane that lets the page through and
+ * catches light — a sheen top-left, glints in the lower corners, a bright rim. Kept
+ * dark on purpose, since text is read over it: the lightest pixel under any line of
+ * the tips holds 7:1 against white. No refraction: bending what is behind takes an
+ * SVG displacement filter that only Chromium runs, and over this flat page there is
+ * nothing to bend. Paint only; the size, spacing and text of whatever wears it are
+ * Tailwind's.
+ */
+.liquid-glass {
+  border: 1px solid rgb(255 255 255 / 0.28);
+  border-radius: 1.75rem;
+  background:
+    radial-gradient(22% 14% at 7% 100%, rgb(255 255 255 / 0.1), transparent 70%),
+    radial-gradient(22% 14% at 95% 100%, rgb(255 255 255 / 0.08), transparent 70%),
+    radial-gradient(45% 60% at 0% 0%, rgb(255 255 255 / 0.12), transparent 60%),
+    linear-gradient(135deg, color-mix(in srgb, var(--color-oro-soft) 38%, transparent), color-mix(in srgb, var(--color-oro) 26%, transparent));
+  -webkit-backdrop-filter: blur(18px) saturate(1.8);
+  backdrop-filter: blur(18px) saturate(1.8);
+  box-shadow:
+    inset 0 1px 1px rgb(255 255 255 / 0.55),
+    inset 0 -1px 1px rgb(255 255 255 / 0.18),
+    inset 0 0 20px color-mix(in srgb, var(--color-oro-soft) 25%, transparent),
+    0 14px 36px -10px color-mix(in srgb, var(--color-oro) 50%, transparent);
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .liquid-glass {
+    background: color-mix(in srgb, var(--color-oro-soft) 38%, var(--color-paper-2));
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+/*
+ * The print routes render app chrome around the document. Anything that is not
+ * the document itself opts out of the page here.
+ */
+@media print {
+  body {
+    background: #ffffff;
+  }
+}

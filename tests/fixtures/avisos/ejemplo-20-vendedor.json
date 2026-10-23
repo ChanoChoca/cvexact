@@ -1,0 +1,48 @@
+{
+  "id": "ejemplo-20-vendedor",
+  "origen": "ejemplo",
+  "segmento": "primer-empleo",
+  "texto": "Vendedor/a - Local de indumentaria (Shopping Alto Avellaneda)\n\nReconocida marca de ropa busca vendedores/as para local en shopping.\n\nRequisitos:\n- Experiencia en ventas de indumentaria (excluyente)\n- Excelente atención al cliente y buena presencia\n- Edad entre 20 y 35 años\n- Disponibilidad para trabajar fines de semana y feriados (excluyente)\n- Manejo de sistema de facturación y caja\n- Dinamismo y trabajo en equipo\n- Se valora conocimiento de inglés básico",
+  "requisitos": [
+    {
+      "fragmento": "Experiencia en ventas de indumentaria (excluyente)",
+      "tipo": "tarea",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Excelente atención al cliente",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "buena presencia",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Edad entre 20 y 35 años",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Disponibilidad para trabajar fines de semana y feriados (excluyente)",
+      "tipo": "condicion",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Manejo de sistema de facturación y caja",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Dinamismo y trabajo en equipo",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Se valora conocimiento de inglés básico",
+      "tipo": "otro",
+      "obligatoriedad": "deseable"
+    }
+  ]
+}

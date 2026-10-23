@@ -1,0 +1,33 @@
+{
+  "id": "ejemplo-10-reponedor",
+  "origen": "ejemplo",
+  "segmento": "primer-empleo",
+  "texto": "Reponedor/a - Hipermercado Zona Oeste\n\nImportante cadena busca reponedores/as para sucursales de Ituzaingó y Castelar.\n\nTareas: reposición de góndolas, control de vencimientos, orden del depósito y atención al cliente en el salón.\n\nRequisitos:\n- Mayor de 18 años\n- Secundario completo (excluyente)\n- Disponibilidad full time, de lunes a sábados\n- Experiencia en reposición o carga y descarga (deseable)\n- Manejo de zorra y transpaleta (deseable)",
+  "requisitos": [
+    {
+      "fragmento": "Mayor de 18 años",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Secundario completo (excluyente)",
+      "tipo": "otro",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Disponibilidad full time, de lunes a sábados",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Experiencia en reposición o carga y descarga (deseable)",
+      "tipo": "tarea",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "Manejo de zorra y transpaleta (deseable)",
+      "tipo": "herramienta",
+      "obligatoriedad": "deseable"
+    }
+  ]
+}

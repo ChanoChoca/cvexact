@@ -1,0 +1,30 @@
+CVExact — avisos de terceros
+============================
+
+Este directorio acompaña a la aplicación y a la imagen Docker. No relicencia
+ningún componente: cada archivo conserva la licencia de su titular.
+
+Componentes con obligaciones que conviene revisar al distribuir:
+
+- sharp (Apache-2.0): https://github.com/lovell/sharp
+  Texto: Apache-2.0-sharp.txt
+
+- @img/sharp-libvips-linux-x64 (glibc) y @img/sharp-libvips-linuxmusl-x64
+  (Alpine/musl): prebuilt de libvips para sharp. La imagen Docker usa musl.
+  Licencias: LGPL-3.0-or-later para libvips y varias de sus dependencias; MPL-2.0
+  para cairo, entre otras. Inventarios upstream:
+  sharp-libvips-linux-x64-README.md y sharp-libvips-linuxmusl-x64-README.md.
+  Textos: LGPL-3.0.txt y GPL-3.0.txt. Si se distribuye la imagen, hay que ofrecer
+  el código fuente correspondiente de las bibliotecas LGPL en los términos de esa
+  licencia.
+
+- lightningcss 1.32.0 y lightningcss-linux-x64-gnu 1.32.0 (MPL-2.0): build de
+  Tailwind/Next; no forma parte del runtime de la app. Texto: MPL-2.0.txt.
+
+- axe-core 4.13.0 (MPL-2.0): sólo desarrollo, vía eslint-config-next.
+  Texto: MPL-2.0.txt; avisos adicionales: axe-core-LICENSE-3RD-PARTY.txt.
+
+- mercadopago 3.4.0 (MIT): runtime de la app. Texto: MIT-mercadopago.txt.
+
+El resto de las dependencias conserva su licencia en el paquete correspondiente;
+ver pnpm-lock.yaml y THIRD_PARTY.md. Esta lista no es asesoría legal.

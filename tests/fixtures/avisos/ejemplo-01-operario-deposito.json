@@ -1,0 +1,43 @@
+{
+  "id": "ejemplo-01-operario-deposito",
+  "origen": "ejemplo",
+  "segmento": "oficios",
+  "texto": "Operario/a de depósito - Zona Sur\n\nImportante empresa de logística busca operarios/as para su centro de distribución en Avellaneda.\n\nRequisitos:\n- Secundario completo (excluyente)\n- Experiencia previa en depósito o logística, mínimo 1 año (excluyente)\n- Manejo de autoelevador y zorra hidráulica\n- Disponibilidad para turnos rotativos y fines de semana (excluyente)\n- Residir en zona sur o cercanías (excluyente)\n- Deseable: curso de seguridad e higiene\n- Se valora conocimiento de sistemas de gestión de stock\n\nOfrecemos:\n- Ingreso inmediato y contrato efectivo\n- Comedor en planta\n- Capacitación continua",
+  "requisitos": [
+    {
+      "fragmento": "Secundario completo (excluyente)",
+      "tipo": "otro",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Experiencia previa en depósito o logística, mínimo 1 año (excluyente)",
+      "tipo": "tarea",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Manejo de autoelevador y zorra hidráulica",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Disponibilidad para turnos rotativos y fines de semana (excluyente)",
+      "tipo": "condicion",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Residir en zona sur o cercanías (excluyente)",
+      "tipo": "condicion",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Deseable: curso de seguridad e higiene",
+      "tipo": "credencial",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "Se valora conocimiento de sistemas de gestión de stock",
+      "tipo": "herramienta",
+      "obligatoriedad": "deseable"
+    }
+  ]
+}

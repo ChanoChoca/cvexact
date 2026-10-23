@@ -1,0 +1,33 @@
+{
+  "id": "ejemplo-11-atencion-telefonica",
+  "origen": "ejemplo",
+  "segmento": "primer-empleo",
+  "texto": "Asesor/a de atención al cliente (telefónica)\n\nEmpresa de servicios busca asesores/as para atender consultas de clientes por teléfono y chat.\n\nRequisitos:\n- Secundario completo\n- Experiencia en atención telefónica o call center (valorable)\n- Manejo de Office a nivel usuario (Word, Excel)\n- Buena dicción y excelente comunicación\n- Disponibilidad para turnos de 6 horas, incluyendo fines de semana\n\nModalidad híbrida. Capacitación paga de 2 semanas.",
+  "requisitos": [
+    {
+      "fragmento": "Secundario completo",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Experiencia en atención telefónica o call center (valorable)",
+      "tipo": "tarea",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "Manejo de Office a nivel usuario (Word, Excel)",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Buena dicción y excelente comunicación",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Disponibilidad para turnos de 6 horas, incluyendo fines de semana",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    }
+  ]
+}

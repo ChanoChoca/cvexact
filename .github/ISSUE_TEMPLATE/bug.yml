@@ -1,0 +1,66 @@
+name: Bug
+description: Algo no funciona como debería
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        No incluyas datos personales, CVs, correos ni credenciales reales. Si el
+        problema es de seguridad, cerrá este formulario y seguí `SECURITY.md`.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Qué pasa
+      description: Contá el síntoma concreto, no la solución que imaginás.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Qué esperabas que pasara
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos para reproducirlo
+      placeholder: |
+        1. Ir a /perfil
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versión o commit
+      description: El hash corto, la rama o la fecha del despliegue.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options:
+        - Perfil y carga de documentos
+        - Generación de CV / PDF / DOCX
+        - Empleos y avisos
+        - Postulaciones (tracker)
+        - Cuenta, ingreso y correo
+        - Pagos y facturación
+        - Extensión del navegador
+        - Otro
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Entorno
+      description: Navegador y sistema operativo. Si es autoalojado, cómo lo corrés.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs o capturas
+      description: Revisá que no haya correos, tokens ni datos de personas.
+      render: shell

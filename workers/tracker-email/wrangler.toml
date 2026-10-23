@@ -1,0 +1,10 @@
+name = "tracker-email-worker"
+main = "src/index.js"
+compatibility_date = "2026-09-03"
+
+# APP_URL es pública (queda en el bundle igual), así que va como var común.
+# ORIGIN_AUTH_SECRET es el secreto compartido con proxy.ts — nunca acá:
+#   wrangler secret put ORIGIN_AUTH_SECRET
+# Ver README.md de este directorio para el resto del deploy.
+[vars]
+APP_URL = "https://cvexact.com"

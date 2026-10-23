@@ -1,0 +1,43 @@
+{
+  "id": "ejemplo-04-mozo",
+  "origen": "ejemplo",
+  "segmento": "oficios",
+  "texto": "MOZO/A - Palermo\n\nRestaurante de cocina de autor busca mozo/a con experiencia en salón para turno noche. Es indispensable contar con carnet de manipulación de alimentos vigente y disponibilidad para trabajar fines de semana y feriados. Se valorará conocimiento de vinos y manejo de sistemas de comanda digital. Buscamos una persona responsable, con buena predisposición para el trabajo en equipo. Sueldo según convenio más propinas. Presentarse con CV en Thames al 1500 de martes a viernes de 15 a 18.",
+  "requisitos": [
+    {
+      "fragmento": "experiencia en salón",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "carnet de manipulación de alimentos vigente",
+      "tipo": "credencial",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "disponibilidad para trabajar fines de semana y feriados",
+      "tipo": "condicion",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "conocimiento de vinos",
+      "tipo": "tarea",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "manejo de sistemas de comanda digital",
+      "tipo": "herramienta",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "persona responsable",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "buena predisposición para el trabajo en equipo",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    }
+  ]
+}

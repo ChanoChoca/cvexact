@@ -1,0 +1,43 @@
+{
+  "id": "ejemplo-18-contador",
+  "origen": "ejemplo",
+  "segmento": "administrativo",
+  "texto": "Contador/a Junior - Estudio Contable\n\nEstudio contable con 20 años en el mercado busca contador/a para liquidación de impuestos y balances.\n\nRequisitos:\n- Contador/a público/a matriculado/a en CPCECABA (excluyente)\n- Experiencia en liquidación de IVA, Ganancias e Ingresos Brutos\n- Manejo del sistema Tango Gestión y de los servicios de ARCA\n- Excel avanzado\n- Experiencia en liquidación de sueldos (deseable)\n- Responsabilidad y confidencialidad\n- Disponibilidad de lunes a viernes, con horario flexible en cierres",
+  "requisitos": [
+    {
+      "fragmento": "Contador/a público/a matriculado/a en CPCECABA (excluyente)",
+      "tipo": "credencial",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Experiencia en liquidación de IVA, Ganancias e Ingresos Brutos",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Manejo del sistema Tango Gestión y de los servicios de ARCA",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Excel avanzado",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Experiencia en liquidación de sueldos (deseable)",
+      "tipo": "tarea",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "Responsabilidad y confidencialidad",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Disponibilidad de lunes a viernes, con horario flexible en cierres",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    }
+  ]
+}

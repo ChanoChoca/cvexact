@@ -1,0 +1,26 @@
+<!--
+  Fixture sintético de una búsqueda de contenido de LinkedIn con dos
+  publicaciones. La primera (Lucía Fernández) menciona a Nexo Labs como link
+  dentro del texto y trae un aviso adjunto; la segunda (Marcos Díaz) está
+  marcada con `data-cvexact-anchor="1"` y no menciona ninguna empresa.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Publicaciones sobre «java» | LinkedIn</title>
+</head>
+<body>
+<div class="card" componentkey="update-card-focusAAA">
+  <p><span>Lucía Fernández</span></p>
+  <a href="https://www.linkedin.com/in/perfil-ejemplo-a1b2c3d4/">Lucía Fernández</a>
+  <a href="https://www.linkedin.com/jobs/view/4466166850">Empleo verificado</a>
+  <span data-testid="expandable-text-box">Job Title: Senior Java Developer<br>Work Location: Kochi (Hybrid)<br>En <a href="https://www.linkedin.com/company/nexolabs/">Nexo Labs</a> buscamos sumar este perfil.<br><button data-testid="expandable-text-button">… más</button></span>
+</div>
+<div class="card" componentkey="update-card-focusBBB" data-cvexact-anchor="1">
+  <p><span>Marcos Díaz</span></p>
+  <a href="https://www.linkedin.com/in/marcos-diaz-b2c3d4e5/">Marcos Díaz</a>
+  <span data-testid="expandable-text-box">Job Title: Senior Java Developer<br>Work Location: Tampa, FL<br>Buscamos sumar un perfil senior al equipo.</span>
+  <div componentkey="translatable-commentary-shareId=7505675641804206081"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+{
+  "id": "ejemplo-14-frontend",
+  "origen": "ejemplo",
+  "segmento": "tecnico",
+  "texto": "Desarrollador/a Frontend Semi Senior (remoto)\n\nProducto SaaS con clientes en LATAM busca desarrollador/a frontend.\n\nRequisitos:\n- 3+ años de experiencia con React y TypeScript (excluyente)\n- Manejo de Git y flujos de trabajo con pull requests\n- Experiencia con testing (Jest, Testing Library)\n- Inglés intermedio para leer documentación (excluyente)\n- Conocimientos de Next.js (deseable)\n- Experiencia con diseño de sistemas de componentes (deseable)\n- Proactividad y comunicación asincrónica\n- Disponibilidad en horario de Argentina\n\nOfrecemos: 100% remoto, equipo flexible, aguinaldo + bono anual.",
+  "requisitos": [
+    {
+      "fragmento": "3+ años de experiencia con React y TypeScript (excluyente)",
+      "tipo": "herramienta",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Manejo de Git y flujos de trabajo con pull requests",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Experiencia con testing (Jest, Testing Library)",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Inglés intermedio para leer documentación (excluyente)",
+      "tipo": "otro",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Conocimientos de Next.js (deseable)",
+      "tipo": "herramienta",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "Experiencia con diseño de sistemas de componentes (deseable)",
+      "tipo": "tarea",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "Proactividad y comunicación asincrónica",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Disponibilidad en horario de Argentina",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    }
+  ]
+}

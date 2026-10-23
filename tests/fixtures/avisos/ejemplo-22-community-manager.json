@@ -1,0 +1,33 @@
+{
+  "id": "ejemplo-22-community-manager",
+  "origen": "ejemplo",
+  "segmento": "tecnico",
+  "texto": "🚀 Estamos buscando un/a Community Manager para sumarse a nuestro equipo de marketing\n\n📌 Lo que vas a hacer:\n• Planificar y publicar contenido en Instagram, TikTok y LinkedIn\n• Responder mensajes y comentarios de la comunidad\n• Armar reportes mensuales en Google Sheets\n\n✅ Lo que buscamos:\n• 2 años de experiencia en redes sociales de marcas\n• Manejo de Canva y herramientas de edición de video\n• Excelente redacción y ortografía\n• Conocimientos de Meta Ads (plus)\n• Inglés lectura técnica (deseable)\n\n🎁 Lo que ofrecemos:\n• Modalidad híbrida (2 días en oficina en Palermo)\n• Prepaga y días de home office",
+  "requisitos": [
+    {
+      "fragmento": "2 años de experiencia en redes sociales de marcas",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Manejo de Canva y herramientas de edición de video",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Excelente redacción y ortografía",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Conocimientos de Meta Ads (plus)",
+      "tipo": "herramienta",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "Inglés lectura técnica (deseable)",
+      "tipo": "otro",
+      "obligatoriedad": "deseable"
+    }
+  ]
+}

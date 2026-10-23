@@ -1,0 +1,109 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+.vscode/
+# Notas sueltas y estado local de herramientas (ver .dockerignore: `notes` y
+# `.claude` tampoco entran al build).
+/notes/
+.claude/
+*.log
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+# ...but the template carries no secrets and is needed to deploy.
+!.env.example
+
+# Wrangler's local secrets file (workers/tracker-email/). No lo matchea `.env*`
+# y lleva el mismo secreto compartido que el clúster.
+.dev.vars*
+workers/*/.dev.vars*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Copied from node_modules by scripts/copy-pdf-worker.mjs on predev/prebuild.
+# Derived from the installed pdfjs-dist, so committing it only creates a copy
+# that can go stale against it.
+/public/pdf.worker.min.mjs
+# Same reasoning, for scripts/build-embedder-worker.mjs: bundled from
+# embedder.worker.ts and the installed @huggingface/transformers.
+/public/embedder.worker.js
+# Same again, for scripts/copy-ort-wasm.mjs: the ONNX runtime's WASM engine (~23 MB).
+/public/ort/
+# And for scripts/copy-ocr.mjs: what reads the photo of a credential in the browser (worker, engine and Spanish data, ~10 MB).
+/public/ocr/
+
+# Exports de perfil personal dejados sueltos en public/ (ver auditoría legal
+# pre-lanzamiento): un archivo así se sirve tal cual en producción. Nunca debe
+# haber uno versionado ni construido en la imagen.
+/public/*.json
+
+# Deployment manifests with live secrets in stringData. Kept locally / applied
+# straight to the cluster. This repository ships Docker Compose for self-hosting
+# (`deploy/docker-compose.yml`), not the production manifests: a sanitized
+# template only belongs here if it has no real values at all.
+/frontend.yaml
+/postgres.yaml
+# Names already excluded from the Docker build context (.dockerignore). They
+# carry the same Secret data, so they must never reach the first commit.
+/cvexact-production.yaml
+/cvexact-postgres-bootstrap.yaml
+/backend-test.yaml
+/frontend-test.yaml
+
+# workers/tracker-email/ es un deploy aparte (Cloudflare Workers), con su
+# propio package.json — node_modules e instalación no son parte del
+# workspace de la raíz, y .wrangler/ es el estado local de `wrangler dev`.
+workers/*/node_modules
+workers/*/.wrangler
+
+# extension/ es otro deploy aparte (WXT/Chrome Web Store/AMO), con su propio
+# package.json — mismo motivo que workers/*/node_modules más arriba.
+extension/node_modules
+extension/.wxt
+extension/.output
+
+# Exports de perfil personal dejados sueltos en la raíz (ver auditoría legal
+# pre-publicación, 2026-09-18): el repo no tiene historia, así que el primer
+# `git add -A` los grabaría para siempre.
+/*-perfil.json
+# Los mismos exports, pero dejados en cualquier subdirectorio.
+**/*-perfil.json
+
+# Zips de la extensión y exports personales que podrían quedar en public/ y
+# servirse tal cual en producción (además de `public/*.json`, arriba).
+*.zip
+/public/*.pdf
+/public/*.docx

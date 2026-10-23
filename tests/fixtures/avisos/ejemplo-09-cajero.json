@@ -1,0 +1,38 @@
+{
+  "id": "ejemplo-09-cajero",
+  "origen": "ejemplo",
+  "segmento": "primer-empleo",
+  "texto": "Cajero/a - Supermercado en Quilmes\n\nSumate a nuestro equipo de cajas. No es necesaria experiencia previa, te capacitamos.\n\nRequisitos:\n- Secundario completo o en curso\n- Ganas de aprender y buena atención al público\n- Disponibilidad para turnos rotativos (mañana, tarde y noche)\n- Responsabilidad y puntualidad\n- Residir en Quilmes, Berazategui o Bernal\n\nOfrecemos: cobertura de obra social, descuentos en compras y posibilidades de crecimiento.",
+  "requisitos": [
+    {
+      "fragmento": "Secundario completo o en curso",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Ganas de aprender",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "buena atención al público",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Disponibilidad para turnos rotativos (mañana, tarde y noche)",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Responsabilidad y puntualidad",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Residir en Quilmes, Berazategui o Bernal",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "ejemplo-33-ejecutivo-atencion-banco",
+  "origen": "ejemplo",
+  "segmento": "administrativo",
+  "texto": "Banco de primera línea selecciona Ejecutivo/a de Atención Comercial.\n\nRequisitos indispensables:\n• Estudios universitarios en curso (Administración, Economía, Contador)\n• Experiencia mínima de 1 año en atención al público, preferentemente en entidades financieras\n• Conocimientos de productos bancarios: cuentas, tarjetas y préstamos\n• Manejo de herramientas informáticas (Office)\n• Disponibilidad para trabajar de lunes a viernes de 10 a 16 hs.\n• Residencia en CABA o GBA\n\nSe valora: inglés intermedio y experiencia en venta de seguros.",
+  "requisitos": [
+    {
+      "fragmento": "Estudios universitarios en curso (Administración, Economía, Contador)",
+      "tipo": "otro",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Experiencia mínima de 1 año en atención al público, preferentemente en entidades financieras",
+      "tipo": "tarea",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Conocimientos de productos bancarios: cuentas, tarjetas y préstamos",
+      "tipo": "tarea",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Manejo de herramientas informáticas (Office)",
+      "tipo": "herramienta",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Disponibilidad para trabajar de lunes a viernes de 10 a 16 hs",
+      "tipo": "condicion",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Residencia en CABA o GBA",
+      "tipo": "condicion",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "inglés intermedio",
+      "tipo": "otro",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "experiencia en venta de seguros",
+      "tipo": "tarea",
+      "obligatoriedad": "deseable"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+[
+  { "ats": "greenhouse", "token": "nubank", "name": "Nubank" },
+  { "ats": "greenhouse", "token": "vercel", "name": "Vercel" },
+  { "ats": "greenhouse", "token": "wise", "name": "Wise" },
+  { "ats": "ashby", "token": "ramp", "name": "Ramp" },
+  { "ats": "ashby", "token": "notion", "name": "Notion" },
+  { "ats": "ashby", "token": "linear", "name": "Linear" },
+  { "ats": "smartrecruiters", "token": "OLXGroup", "name": "OLX Group" },
+  { "ats": "smartrecruiters", "token": "Uala", "name": "Ualá" },
+  { "ats": "workable", "token": "mercadolibre", "name": "Mercado Libre" },
+  { "ats": "workable", "token": "globant", "name": "Globant" }
+]

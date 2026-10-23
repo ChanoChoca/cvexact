@@ -1,0 +1,45 @@
+# El stage `builder` del Dockerfile hace `COPY . .`. Sin este archivo, el .env
+# de desarrollo —con MP_ACCESS_TOKEN, MP_WEBHOOK_SECRET, BETTER_AUTH_SECRET y un
+# DATABASE_URL que apunta a localhost— entra al contexto de build y `next build`
+# lo carga. Los valores de servidor se leen en runtime, así que el Secret de k8s
+# gana igual y la app se conecta a donde tiene que conectarse; pero los secretos
+# viajarían dentro de la imagen sin ninguna necesidad.
+
+# Secretos. .env.example sí entra: es la plantilla, no tiene valores.
+.env
+.env.*
+!.env.example
+
+# Exports de perfil personal dejados sueltos en public/ (ver auditoría legal
+# pre-lanzamiento): el Dockerfile hace COPY --from=builder /app/public ./public,
+# así que cualquier archivo suelto ahí queda servido en producción sin auth.
+public/*.json
+
+# Se reinstalan y se reconstruyen adentro; copiarlos sólo ensucia la caché.
+node_modules
+.next
+tsconfig.tsbuildinfo
+coverage
+
+.git
+.gitignore
+.vscode
+.claude
+
+# Manifiestos y config de despliegue: los lee kubectl, no el build.
+# OJO: pnpm-lock.yaml y pnpm-workspace.yaml NO van acá — el stage `deps` los copia.
+postgres.yaml
+cvexact-production.yaml
+cvexact-postgres-bootstrap.yaml
+backend-test.yaml
+frontend-test.yaml
+
+# Documentación y notas.
+*.md
+# ...salvo los avisos de terceros que tienen que viajar dentro de la imagen.
+!THIRD_PARTY_LICENSES/*.md
+notes
+
+# Idem: `COPY . .` del stage builder los metería en el contexto de build.
+# (En .dockerignore el patrón ya se ancla a la raíz del contexto.)
+*-perfil.json

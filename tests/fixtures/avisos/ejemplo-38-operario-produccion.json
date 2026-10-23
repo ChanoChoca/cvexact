@@ -1,0 +1,43 @@
+{
+  "id": "ejemplo-38-operario-produccion",
+  "origen": "ejemplo",
+  "segmento": "primer-empleo",
+  "texto": "OPERARIOS/AS DE PRODUCCIÓN – PARQUE INDUSTRIAL GARÍN\n\nEmpresa alimenticia incorpora operarios/as para línea de envasado.\n\nRequerimientos:\nSecundario completo. Mayor de 18 años. Disponibilidad para rotar turnos (mañana, tarde, noche). Experiencia en producción o envasado deseable. Conocimiento de BPM (Buenas Prácticas de Manufactura) valorable. Carnet de manipulación de alimentos obligatorio. Vivir en zona norte (Escobar, Garín, Pilar).\n\nBeneficios: comedor, transporte, obra social.",
+  "requisitos": [
+    {
+      "fragmento": "Secundario completo",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Mayor de 18 años",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Disponibilidad para rotar turnos (mañana, tarde, noche)",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Experiencia en producción o envasado deseable",
+      "tipo": "tarea",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "Conocimiento de BPM (Buenas Prácticas de Manufactura) valorable",
+      "tipo": "tarea",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "Carnet de manipulación de alimentos obligatorio",
+      "tipo": "credencial",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Vivir en zona norte (Escobar, Garín, Pilar)",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    }
+  ]
+}

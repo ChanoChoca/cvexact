@@ -1,0 +1,484 @@
+/*
+ * Reproducción estricta de `public/plantilla-cv.html`.
+ *
+ * Cada medida de abajo es la de la plantilla, listada como hechos en
+ * `docs/plantilla-cv.md`. No "limpiar" los valores raros (32.2pt, 17.9pt,
+ * 10.5pt, 1.0791666): son la plantilla, y que coincidan es el punto de este
+ * archivo.
+ *
+ * La página es A4 (595.28pt de ancho, 538.48pt de contenido), el estándar en
+ * España y Latinoamérica; el espécimen de referencia usa la misma. Override
+ * --cv-page-width / --cv-page-height para Letter.
+ *
+ * Units are pt throughout. Browsers map pt correctly for print (1pt = 1/72in)
+ * and to 1.333px on screen, so the preview is a faithful scale model of the PDF.
+ *
+ * Tailwind must not reach these rules: this file is imported by the CV
+ * components directly and every selector is scoped under .cv-document.
+ *
+ * The eight STIX Two Text files below are redistributed under the SIL Open
+ * Font License 1.1, which requires the license text to travel with the
+ * font — see public/fonts/OFL.txt and THIRD_PARTY.md.
+ *
+ * They are static instances (wght 400 and 700, upright and italic), cut from
+ * Google Fonts' variable woff2 with `fontTools.varLib.instancer`, not the
+ * variable files themselves: Chromium prints a variable font as Type 3, whose
+ * text layer comes back from `pdftotext -raw` with almost no spaces, and a
+ * static TrueType face as a CID font that keeps them. A changed file is a new
+ * name, so no cache can serve the old cut.
+ */
+
+@font-face {
+  font-family: "STIX Two Text CV";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block; /* block, not swap: a fallback flash would print wrong */
+  src: url("/fonts/stix-two-text-regular-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "STIX Two Text CV";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("/fonts/stix-two-text-regular-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "STIX Two Text CV";
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url("/fonts/stix-two-text-bold-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "STIX Two Text CV";
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url("/fonts/stix-two-text-bold-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "STIX Two Text CV";
+  font-style: italic;
+  font-weight: 400;
+  font-display: block;
+  src: url("/fonts/stix-two-text-regular-italic-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "STIX Two Text CV";
+  font-style: italic;
+  font-weight: 400;
+  font-display: block;
+  src: url("/fonts/stix-two-text-regular-italic-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "STIX Two Text CV";
+  font-style: italic;
+  font-weight: 700;
+  font-display: block;
+  src: url("/fonts/stix-two-text-bold-italic-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "STIX Two Text CV";
+  font-style: italic;
+  font-weight: 700;
+  font-display: block;
+  src: url("/fonts/stix-two-text-bold-italic-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+.cv-document {
+  /* Page geometry */
+  --cv-page-width: 595.28pt; /* A4 */
+  --cv-page-height: 841.89pt;
+  --cv-pad-x: 28.4pt; /* .c43 padding */
+  --cv-pad-top: 28.4pt;
+  --cv-pad-bottom: 14.2pt;
+
+  /* Vertical rhythm — from the template's spacer rows */
+  /*
+   * The export encodes spacing as table-row heights, which include the text
+   * they wrap. These are the resulting gaps, not the raw row heights: e.g. the
+   * summary row is 47.7pt tall around ~36pt of text, so ~12pt of slack, plus
+   * the 5.8pt spacer row that follows it.
+   */
+  --cv-gap-after-contact: 7.1pt; /* row .c89 */
+  --cv-gap-after-heading: 9pt; /* spacer row holding 8pt empty text */
+  --cv-gap-between-entries: 12pt; /* spacer row holding 11pt empty text */
+  --cv-gap-before-heading: 12pt; /* .c93 spacer + slack in the heading row */
+
+  --cv-rule: 1pt solid #000000;
+
+  box-sizing: border-box;
+  width: var(--cv-page-width);
+  min-height: var(--cv-page-height);
+  padding: var(--cv-pad-top) var(--cv-pad-x) var(--cv-pad-bottom);
+  margin: 0 auto;
+  background: #ffffff;
+  color: #000000;
+  font-family: "STIX Two Text CV", "STIX Two Text", serif;
+  font-size: 11pt; /* p { font-size: 11pt } */
+  line-height: 1;
+  text-align: left;
+  /* Google Docs pages do not hyphenate; neither should we. */
+  hyphens: none;
+  /*
+   * A token longer than the column — a URL, an email, a linkedin.com/in link,
+   * a run the model emitted without spaces — would otherwise push past the
+   * text column and get clipped at the page edge: measured in Etapa 0, such a
+   * CV's content reached xMax > 594.96pt inside a page that ends at 595.28pt,
+   * so the overflow was cut off in the printed PDF while the screen preview,
+   * which can scroll sideways, called it fine. `anywhere` (not `break-word`:
+   * it applies to min-content sizing too, which is what lets the box itself
+   * clamp) breaks the token at the edge; validated in Etapa 0 to leave the
+   * height of CVs that wrap normally exactly unchanged.
+   */
+  overflow-wrap: anywhere;
+  /*
+   * "fl"/"fi" drawn as one ligature glyph, with no ToUnicode entry for it, is
+   * still legal PDF — the glyph has an /ActualText span saying what it means —
+   * but pdf.js (and plenty of other extractors: any ATS a CV goes through)
+   * reads only ToUnicode and gets a bare U+0000 for the whole glyph. Nothing
+   * about this app's own reader can fix a CV once it has left the browser, so
+   * this is the export-side half: without ligature substitution there is only
+   * ever one glyph per letter, each with its own ToUnicode entry, and the
+   * PDF's text layer is exactly what the page shows. See
+   * lib/import/actual-text.ts for the read-side half, which still recovers an
+   * already-exported CV that has this problem.
+   */
+  font-variant-ligatures: none;
+}
+
+.cv-document * {
+  box-sizing: border-box;
+}
+
+/*
+ * The reset is wrapped in :where() so it contributes zero specificity. Written
+ * as `.cv-document h1` it would score 0-1-1 and outrank every component class
+ * below (0-1-0), silently stripping their font sizes, weights and margins.
+ */
+.cv-document :where(p, ul, li, h1, h2) {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  list-style: none;
+}
+
+/* --- Header ---------------------------------------------------------------- */
+
+.cv-name {
+  font-size: 24pt; /* .c37 */
+  font-weight: 700; /* .c33 */
+  text-align: center; /* .c83 */
+  line-height: 1;
+}
+
+.cv-contact {
+  padding-top: 9pt; /* row .c70 is 31.5pt tall around an 11pt line */
+  padding-bottom: 9pt;
+  text-align: center;
+  font-size: 11pt; /* .c18 */
+  font-weight: 400;
+  line-height: 1;
+  border-bottom: var(--cv-rule); /* cell .c72 */
+}
+
+.cv-contact a {
+  color: #1155cc; /* .c67 */
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.cv-contact-line + .cv-contact-line {
+  margin-top: 2pt;
+}
+
+/* --- Summary --------------------------------------------------------------- */
+
+.cv-summary {
+  margin-top: var(--cv-gap-after-contact);
+  font-size: 10.5pt; /* .c50 */
+  color: #0e0e0e; /* .c50 */
+  font-style: italic; /* .c22 */
+  font-weight: 400;
+  line-height: 1.15; /* .c42 */
+}
+
+/* --- Sections -------------------------------------------------------------- */
+
+/* Applies to the first section too, which is what separates it from the summary. */
+.cv-section {
+  margin-top: var(--cv-gap-before-heading);
+}
+
+.cv-section-heading {
+  font-size: 12pt; /* .c24 / .c68 */
+  font-weight: 700;
+  line-height: 1;
+  padding-bottom: 2pt;
+  border-bottom: var(--cv-rule); /* cell .c25 / .c56 */
+  margin-bottom: var(--cv-gap-after-heading);
+}
+
+.cv-entry + .cv-entry {
+  margin-top: var(--cv-gap-between-entries);
+}
+
+/*
+ * Two-column entry header. The export uses merged table cells at roughly
+ * 75%/25%, with the split varying per row (418.2/141.5, 423.6/136.1,
+ * 427.2/132.5, 425/134.7) — an artifact of how the cells were merged, not a
+ * design. Flex reproduces the look and, unlike a fixed split, will not wrap a
+ * long date range onto two lines.
+ */
+.cv-entry-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12pt;
+}
+
+.cv-entry-left {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.cv-entry-right {
+  /* Shrinks and wraps past 45% of the line: a long place or date gives way before the company, whose name is the one thing the header cannot lose. */
+  flex: 0 1 auto;
+  max-width: 45%;
+  text-align: right; /* .c39 / .c27 */
+}
+
+.cv-org {
+  font-weight: 700; /* .c35 / .c21 */
+  line-height: 1; /* .c31 */
+}
+
+.cv-role {
+  font-weight: 400; /* .c18 / .c11 */
+  line-height: 1;
+}
+
+.cv-location {
+  font-weight: 700; /* .c35 / .c33 */
+  line-height: 1; /* .c39 */
+}
+
+.cv-dates {
+  font-style: italic; /* .c4 / .c8 */
+  font-weight: 400;
+  line-height: 1.5; /* .c27 */
+}
+
+.cv-honors {
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* The person's reason for a short stay or the pause before a job: one italic line under its header. */
+.cv-note {
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.cv-honors-label {
+  font-weight: 400;
+}
+
+/* --- Bullets --------------------------------------------------------------- */
+
+.cv-bullets {
+  margin-top: 4pt;
+}
+
+/*
+ * .c41 / .c55: margin-left 32.2pt, padding-bottom 3pt, line-height 1.0.
+ * li.li-bullet-0:before: min-width 17.9pt, margin-left -17.9pt, so the marker
+ * hangs into the indent and the text block starts at 32.2pt.
+ *
+ * The export also puts margin-right: 42.5pt on the first job's bullets only.
+ * That is a stray value from editing, not part of the design, so it is omitted
+ * here — otherwise one job would wrap differently from the others.
+ */
+.cv-bullets li {
+  margin-left: 32.2pt;
+  padding-bottom: 3pt;
+  line-height: 1;
+  font-size: 11pt;
+  font-weight: 400;
+}
+
+.cv-bullets li::before {
+  /*
+   * U+2022 BULLET, not the U+25CF ● the template's class draws: U+25CF sits
+   * outside every unicode-range of the STIX @font-faces above, so each marker
+   * silently fell back to a system font (WenQuanYi Zen Hei / Liberation) while
+   * the row stayed STIX — a different font for the same line, and a font no
+   * PDF inspection can call embedded. U+2022 lands inside the latin woff2's
+   * U+2000-206F range, so the marker comes from STIX like the text beside it.
+   * Same hanging geometry as the template's marker (17.9pt box, -17.9pt pull).
+   */
+  content: "\002022   "; /* was .lst-kix_list_4-0's \0025cf */
+  display: inline-block;
+  min-width: 17.9pt;
+  margin-left: -17.9pt;
+  white-space: nowrap;
+}
+
+/*
+ * Only the interactive previews ever render this — the profile's and the
+ * onboarding's — a bullet that opens the fact behind it. Reset to look
+ * exactly like the plain <li> text beside it, so "clickable" reads as a hover
+ * affordance, not as a button: the print/export path never sees this class
+ * at all.
+ *
+ * Its <li> is laid out as a row: with a block inside it, the ::before marker
+ * got a line box of its own, so every clickable bullet started a line below
+ * its dot and the preview ran a line longer per bullet than the printed page.
+ * In a row the marker still hangs into the indent (its negative margin holds)
+ * and sits on the baseline of the text's first line, where the plain <li>
+ * puts it.
+ */
+.cv-bullets li:has(> .cv-bullet-button) {
+  display: flex;
+  align-items: baseline;
+}
+
+.cv-bullet-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.cv-bullet-button:hover,
+.cv-bullet-button:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+}
+
+/* Standalone bullet sections (SKILLS ADICIONALES) use line-height 1.079 (.c45) */
+.cv-section-bullets li {
+  line-height: 1.0791666666666666;
+}
+
+/* --- Pairs ----------------------------------------------------------------- */
+
+/*
+ * Labelled facts — certifications, languages, availability. Laid out like
+ * .cv-honors rather than as a two-column entry: the value is two or three
+ * words, and pushing it to the right margin would leave a gap wide enough to
+ * read as a mistake.
+ */
+.cv-pair,
+.cv-project {
+  padding-bottom: 3pt; /* matches .cv-bullets li */
+  line-height: 1;
+  font-weight: 400;
+}
+
+.cv-pair-label {
+  font-weight: 700;
+}
+
+/* A project is a pair whose tail is a link: the same blue as the contact line's. */
+.cv-project a {
+  color: #1155cc;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+/* --- Screen preview -------------------------------------------------------- */
+
+.cv-page-frame {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  background: #525659; /* the grey a PDF viewer puts behind a page */
+}
+
+.cv-page-frame .cv-document {
+  box-shadow: 0 2px 12px rgb(0 0 0 / 0.35);
+}
+
+/* --- Print ----------------------------------------------------------------- */
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+  }
+
+  /* Anything outside the document is chrome and must not reach the paper. */
+  .cv-print-hidden {
+    display: none !important;
+  }
+
+  .cv-page-frame {
+    display: block;
+    padding: 0;
+    background: none;
+  }
+
+  .cv-page-frame .cv-document {
+    box-shadow: none;
+  }
+
+  .cv-document {
+    width: auto;
+    min-height: auto;
+    margin: 0;
+    /* A CV of two sheets: each fragment of the document keeps its own padding, so the second sheet has the first one's margin at the top and does not start at the edge of the paper. */
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  /* Never split an entry's header from its bullets across a page break. */
+  .cv-entry,
+  .cv-project,
+  .cv-section-heading {
+    break-inside: avoid;
+  }
+
+  .cv-section-heading {
+    break-after: avoid;
+  }
+}

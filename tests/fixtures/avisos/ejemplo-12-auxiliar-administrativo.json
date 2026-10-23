@@ -1,0 +1,38 @@
+{
+  "id": "ejemplo-12-auxiliar-administrativo",
+  "origen": "ejemplo",
+  "segmento": "primer-empleo",
+  "texto": "Auxiliar administrativo/a (Jr) - Microcentro\n\nEstudio de servicios busca auxiliar administrativo/a para tareas de apoyo.\n\nBuscamos:\n- Estudiante avanzado/a de Administración, Contabilidad o carreras afines\n- Excel intermedio: tablas dinámicas y fórmulas básicas (excluyente)\n- Manejo de Word y correo electrónico\n- Orden, prolijidad y compromiso\n- Experiencia previa en carga de facturas\n- Disponibilidad de lunes a viernes de 9 a 18 hs\n\nTareas: atención de llamados, carga de datos, seguimiento de pagos.",
+  "requisitos": [
+    {
+      "fragmento": "Estudiante avanzado/a de Administración, Contabilidad o carreras afines",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Excel intermedio: tablas dinámicas y fórmulas básicas (excluyente)",
+      "tipo": "herramienta",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Manejo de Word y correo electrónico",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Orden, prolijidad y compromiso",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Experiencia previa en carga de facturas",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Disponibilidad de lunes a viernes de 9 a 18 hs",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    }
+  ]
+}

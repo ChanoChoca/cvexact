@@ -1,0 +1,1 @@
+CREATE INDEX "application_ghosting_candidates_idx" ON "application" USING btree ("last_activity_at") WHERE "application"."status" in ('postulado', 'en_revision') and not "application"."archived";

@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts"
+  ],
+  "exclude": [
+    "node_modules",
+    // Deploys aparte, cada uno con su propio tsconfig y su propio
+    // node_modules — sin esto, `pnpm typecheck` en la raíz sólo tipa bien
+    // cuando esas carpetas ya tienen `npm install` corrido adentro (porque
+    // TS encuentra "wxt" caminando hacia arriba desde el archivo), y falla
+    // con errores que no tienen nada que ver con la app principal apenas
+    // alguien clona el repo y no instaló ahí primero.
+    "extension",
+    "workers"
+  ]
+}

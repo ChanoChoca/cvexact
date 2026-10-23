@@ -1,0 +1,48 @@
+{
+  "id": "ejemplo-15-soporte-it",
+  "origen": "ejemplo",
+  "segmento": "tecnico",
+  "texto": "Analista de Soporte Técnico (nivel 1 y 2)\n\nConsultora de IT busca analista de soporte para atender usuarios de clientes corporativos en CABA.\n\nRequerimientos:\n- Terciario en curso o completo en Sistemas o afines\n- Experiencia en soporte a usuarios (help desk) de al menos 1 año\n- Conocimientos de Windows 10/11, Office 365 y Active Directory (excluyente)\n- Nociones de redes: TCP/IP, DHCP, DNS\n- Manejo de herramientas de acceso remoto (TeamViewer, AnyDesk)\n- Disponibilidad para guardias rotativas\n- Certificación ITIL (deseable)\n- Carnet de conducir (deseable) para visitas a clientes",
+  "requisitos": [
+    {
+      "fragmento": "Terciario en curso o completo en Sistemas o afines",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Experiencia en soporte a usuarios (help desk) de al menos 1 año",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Conocimientos de Windows 10/11, Office 365 y Active Directory (excluyente)",
+      "tipo": "herramienta",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Nociones de redes: TCP/IP, DHCP, DNS",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Manejo de herramientas de acceso remoto (TeamViewer, AnyDesk)",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Disponibilidad para guardias rotativas",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Certificación ITIL (deseable)",
+      "tipo": "credencial",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "Carnet de conducir (deseable) para visitas a clientes",
+      "tipo": "condicion",
+      "obligatoriedad": "deseable"
+    }
+  ]
+}

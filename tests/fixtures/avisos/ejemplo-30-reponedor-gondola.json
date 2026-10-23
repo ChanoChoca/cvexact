@@ -1,0 +1,38 @@
+{
+  "id": "ejemplo-30-reponedor-gondola",
+  "origen": "ejemplo",
+  "segmento": "primer-empleo",
+  "texto": "Reponedor/a de góndola – Supermercado barrial (Lanús)\n\nBuscamos personas para reposición en supermercado barrial.\nNo se requiere experiencia, solo ganas de trabajar.\n\nPedimos:\n- Mayor de 18 años\n- Secundario en curso o completo\n- Vivir en Lanús o zonas cercanas\n- Disponibilidad rotativa (mañana/tarde)\n- Responsabilidad y buena predisposición\n- Carnet de manipulación de alimentos (deseable)",
+  "requisitos": [
+    {
+      "fragmento": "Mayor de 18 años",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Secundario en curso o completo",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Vivir en Lanús o zonas cercanas",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Disponibilidad rotativa (mañana/tarde)",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Responsabilidad y buena predisposición",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Carnet de manipulación de alimentos (deseable)",
+      "tipo": "credencial",
+      "obligatoriedad": "deseable"
+    }
+  ]
+}

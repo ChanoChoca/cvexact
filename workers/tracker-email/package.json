@@ -1,0 +1,17 @@
+{
+  "name": "tracker-email-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Email Worker: recibe los correos reenviados a u_xxxxxxxx@<TRACKER_EMAIL_DOMAIN> y los manda a POST /api/tracker/email/ingest de la app para clasificar. Ver docs/tracker-email-fase3.md.",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "license": "AGPL-3.0-or-later",
+  "dependencies": {
+    "postal-mime": "^3.0.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.128.0"
+  }
+}

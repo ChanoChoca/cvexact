@@ -1,0 +1,33 @@
+{
+  "id": "ejemplo-34-limpieza-oficinas",
+  "origen": "ejemplo",
+  "segmento": "oficios",
+  "texto": "Se busca personal de limpieza para edificio de oficinas en Retiro. Turno mañana (6 a 14). Con experiencia comprobable y referencias. Que sea responsable y puntual. Libreta sanitaria al día. Zona de residencia: CABA o zona norte.",
+  "requisitos": [
+    {
+      "fragmento": "experiencia comprobable",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "referencias",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "responsable y puntual",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Libreta sanitaria al día",
+      "tipo": "credencial",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Zona de residencia: CABA o zona norte",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    }
+  ]
+}

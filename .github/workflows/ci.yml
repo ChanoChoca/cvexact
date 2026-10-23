@@ -1,0 +1,82 @@
+name: CI
+
+on:
+  # Sin filtro de rama: la rama por defecto todavía no está confirmada y un
+  # push a cualquier rama del repositorio público tiene que pasar los chequeos.
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # El proyecto usa DCO, no CLA: cada commit del PR tiene que llevar su
+  # `Signed-off-by:` (ver docs/CONTRIBUTING.md). Se verifica acá y no con una
+  # acción de terceros para no sumar una dependencia que haya que pinear.
+  dco:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # La punta de la rama del PR, no el merge sintético de GitHub: ese
+          # merge no lleva `Signed-off-by` y haría fallar el chequeo siempre.
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - name: Verificar Signed-off-by en cada commit
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          set -eu
+          git fetch --no-tags origin "$BASE_REF"
+          missing=0
+          for sha in $(git rev-list "origin/$BASE_REF"..HEAD); do
+            if ! git log -1 --format=%B "$sha" | grep -qiE '^Signed-off-by: .+ <.+@.+>$'; then
+              echo "::error::Falta Signed-off-by en $sha"
+              missing=1
+            fi
+          done
+          exit $missing
+
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.21.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm typecheck
+      - run: pnpm test
+
+  # El build no necesita una base ni credenciales reales. Estos son valores de
+  # prueba: el `DATABASE_URL` no se conecta y el secreto no protege nada.
+  build:
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: postgres://test:test@127.0.0.1:5432/test
+      BETTER_AUTH_SECRET: ci-only-not-a-real-secret
+      BETTER_AUTH_URL: http://localhost:3000
+      NEXT_PUBLIC_SITE_URL: http://localhost:3000
+      LEGAL_OPERATOR_NAME: Test Operator
+      LEGAL_CONTACT_EMAIL: test@example.com
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.21.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build

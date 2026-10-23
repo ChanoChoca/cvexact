@@ -1,0 +1,38 @@
+{
+  "id": "ejemplo-31-maestro-mayor-de-obra",
+  "origen": "ejemplo",
+  "segmento": "oficios",
+  "texto": "MAESTRO MAYOR DE OBRA – Pilar\n\nConstructora busca Maestro Mayor de Obra para coordinar obras residenciales.\n\nRequisitos:\n✔ Título de Maestro Mayor de Obra o Técnico en Construcciones (excluyente)\n✔ 5 años de experiencia en dirección de obra\n✔ Lectura de planos y cómputos métricos\n✔ Conocimiento de AutoCAD y Excel\n✔ Carnet de conducir y vehículo propio\n✔ Liderazgo de equipos de trabajo\n\nSe ofrece: sueldo acorde, vehículo de la empresa, obra social.",
+  "requisitos": [
+    {
+      "fragmento": "Título de Maestro Mayor de Obra o Técnico en Construcciones (excluyente)",
+      "tipo": "otro",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "5 años de experiencia en dirección de obra",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Lectura de planos y cómputos métricos",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Conocimiento de AutoCAD y Excel",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Carnet de conducir y vehículo propio",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Liderazgo de equipos de trabajo",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    }
+  ]
+}

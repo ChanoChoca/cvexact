@@ -1,0 +1,33 @@
+{
+  "id": "ejemplo-21-vendedora-local",
+  "origen": "ejemplo",
+  "segmento": "primer-empleo",
+  "texto": "SE NECESITA VENDEDORA PARA LOCAL DE ROPA EN FLORES. REQUISITOS: BUENA PRESENCIA, ONDA, MANEJO DE REDES SOCIALES, DISPONIBILIDAD HORARIA (INCLUYE SABADOS), MAYOR DE 21. SE OFRECE SUELDO + COMISIONES. ENVIAR CV A rrhh.modaflores@example.com O PRESENTARSE EN AV. AVELLANEDA 2500.",
+  "requisitos": [
+    {
+      "fragmento": "BUENA PRESENCIA",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "ONDA",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "MANEJO DE REDES SOCIALES",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "DISPONIBILIDAD HORARIA (INCLUYE SABADOS)",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "MAYOR DE 21",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    }
+  ]
+}

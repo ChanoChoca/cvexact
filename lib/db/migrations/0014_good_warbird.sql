@@ -1,0 +1,1 @@
+ALTER TABLE "job_posting" ADD COLUMN "country" text DEFAULT '' NOT NULL;

@@ -1,0 +1,43 @@
+{
+  "id": "ejemplo-07-chofer-reparto",
+  "origen": "ejemplo",
+  "segmento": "oficios",
+  "texto": "Chofer de reparto - Zona Norte\n\nDistribuidora de bebidas incorpora chofer para reparto en camión liviano.\n\nPerfil:\n- Licencia profesional D1 vigente (excluyente)\n- Experiencia en reparto de mercadería, mínimo 2 años\n- Libreta sanitaria al día\n- Residir en San Isidro, Vicente López o zonas cercanas\n- Disponibilidad para comenzar a las 5 hs\n- Buen manejo de hoja de ruta y planilla de entregas\n- Deseable secundario completo\n\nSe ofrece sueldo según convenio, premios por asistencia y obra social.",
+  "requisitos": [
+    {
+      "fragmento": "Licencia profesional D1 vigente (excluyente)",
+      "tipo": "condicion",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Experiencia en reparto de mercadería, mínimo 2 años",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Libreta sanitaria al día",
+      "tipo": "credencial",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Residir en San Isidro, Vicente López o zonas cercanas",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Disponibilidad para comenzar a las 5 hs",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Buen manejo de hoja de ruta y planilla de entregas",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Deseable secundario completo",
+      "tipo": "otro",
+      "obligatoriedad": "deseable"
+    }
+  ]
+}

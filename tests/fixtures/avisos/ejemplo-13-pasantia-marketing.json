@@ -1,0 +1,33 @@
+{
+  "id": "ejemplo-13-pasantia-marketing",
+  "origen": "ejemplo",
+  "segmento": "primer-empleo",
+  "texto": "Pasantía en Marketing Digital\n\nAgencia de comunicación abre una pasantía para estudiantes. Duración 6 meses, 4 horas diarias.\n\nRequisitos:\n- Estudiante de Marketing, Comunicación o carreras afines (excluyente)\n- Manejo de Instagram y TikTok para negocios\n- Conocimientos básicos de Canva (deseable)\n- Creatividad y proactividad\n- Disponibilidad de 4 horas por la tarde\n\nNo se requiere experiencia previa.",
+  "requisitos": [
+    {
+      "fragmento": "Estudiante de Marketing, Comunicación o carreras afines (excluyente)",
+      "tipo": "otro",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Manejo de Instagram y TikTok para negocios",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Conocimientos básicos de Canva (deseable)",
+      "tipo": "herramienta",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "Creatividad y proactividad",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Disponibilidad de 4 horas por la tarde",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    }
+  ]
+}

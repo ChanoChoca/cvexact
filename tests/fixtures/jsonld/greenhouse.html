@@ -1,0 +1,57 @@
+<!--
+  Fixture representativo del JSON-LD que Greenhouse documenta para sus
+  páginas de aviso (schema.org JobPosting, para elegibilidad en Google for
+  Jobs). No se pudo obtener durante esta tarea una página en vivo de
+  Greenhouse que todavía sirva el bloque server-side — las boards actuales
+  (job-boards.greenhouse.io) son una SPA Remix y varias compañías ya no lo
+  incluyen — así que este fixture reconstruye la forma documentada en vez de
+  citar una URL real. Ver tests/fixtures/jsonld/lever-real.html para el caso
+  que sí se verificó contra una página en vivo. El parser no tiene ninguna
+  rama específica por ATS — lee schema.org genérico — así que lo que prueba
+  este fixture es la misma ruta de código que Lever ya probó contra datos
+  reales, con la forma que Greenhouse publica en su documentación.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Senior Backend Engineer - Acme Corp</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "JobPosting",
+  "title": "Senior Backend Engineer",
+  "description": "<p>We are looking for a Senior Backend Engineer to join our platform team.</p><ul><li>5+ years of experience</li><li>Strong Node.js and PostgreSQL background</li></ul>",
+  "datePosted": "2026-08-15",
+  "validThrough": "2026-11-15T00:00:00Z",
+  "employmentType": "FULL_TIME",
+  "hiringOrganization": {
+    "@type": "Organization",
+    "name": "Acme Corp",
+    "sameAs": "https://acme.example.com",
+    "logo": "https://acme.example.com/logo.png"
+  },
+  "jobLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Buenos Aires",
+      "addressRegion": "CABA",
+      "addressCountry": "AR"
+    }
+  },
+  "jobLocationType": "TELECOMMUTE",
+  "baseSalary": {
+    "@type": "MonetaryAmount",
+    "currency": "USD",
+    "value": {
+      "@type": "QuantitativeValue",
+      "minValue": 3000,
+      "maxValue": 4500,
+      "unitText": "MONTH"
+    }
+  }
+}
+</script>
+</head>
+<body></body>
+</html>

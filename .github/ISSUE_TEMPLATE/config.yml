@@ -1,0 +1,10 @@
+# Los enlaces de seguridad requieren «Private vulnerability reporting» activo en
+# Settings → Code security.
+blank_issues_enabled: true
+contact_links:
+  - name: Reportar una vulnerabilidad
+    url: https://github.com/ChanoChoca/cvexact/security/advisories/new
+    about: No abras un issue público para problemas de seguridad. Ver SECURITY.md.
+  - name: Cómo contribuir
+    url: https://github.com/ChanoChoca/cvexact/blob/main/docs/CONTRIBUTING.md
+    about: Entorno, tests, DCO y estilo de commits.

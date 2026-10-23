@@ -1,0 +1,43 @@
+{
+  "id": "ejemplo-28-enfermero-geriatrico",
+  "origen": "ejemplo",
+  "segmento": "oficios",
+  "texto": "Enfermero/a Profesional - Geriátrico en Belgrano\n\nRequerimos enfermeros/as profesionales para turnos de 12 horas (diurnos y nocturnos).\n\nSe solicita:\n* Título de Enfermero/a Profesional (excluyente)\n* Matrícula provincial o nacional vigente (excluyente)\n* Experiencia en geriatría o cuidados domiciliarios\n* Esquema de vacunación completo\n* Disponibilidad para turnos de 12 hs, incluidos fines de semana y feriados\n* Calidez y paciencia con los residentes\n* Se valorará curso de RCP actualizado",
+  "requisitos": [
+    {
+      "fragmento": "Título de Enfermero/a Profesional (excluyente)",
+      "tipo": "otro",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Matrícula provincial o nacional vigente (excluyente)",
+      "tipo": "credencial",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Experiencia en geriatría o cuidados domiciliarios",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Esquema de vacunación completo",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Disponibilidad para turnos de 12 hs, incluidos fines de semana y feriados",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Calidez y paciencia con los residentes",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Se valorará curso de RCP actualizado",
+      "tipo": "credencial",
+      "obligatoriedad": "deseable"
+    }
+  ]
+}

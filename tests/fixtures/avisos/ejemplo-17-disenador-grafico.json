@@ -1,0 +1,48 @@
+{
+  "id": "ejemplo-17-disenador-grafico",
+  "origen": "ejemplo",
+  "segmento": "tecnico",
+  "texto": "Diseñador/a Gráfico/a\n\nEstudio de branding busca diseñador/a gráfico/a para proyectos de identidad visual y packaging.\n\nRequisitos:\n- Dominio de Adobe Illustrator y Photoshop (excluyente)\n- Conocimientos de InDesign\n- Portfolio con trabajos de identidad visual\n- Ojo para el detalle y creatividad\n- Experiencia mínima de 2 años en estudios o agencias\n- Disponibilidad full time\n- Deseable manejo de Figma y nociones de motion graphics\n\nSueldo acorde a experiencia.",
+  "requisitos": [
+    {
+      "fragmento": "Dominio de Adobe Illustrator y Photoshop (excluyente)",
+      "tipo": "herramienta",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Conocimientos de InDesign",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Portfolio con trabajos de identidad visual",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Ojo para el detalle y creatividad",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Experiencia mínima de 2 años en estudios o agencias",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Disponibilidad full time",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Deseable manejo de Figma",
+      "tipo": "herramienta",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "nociones de motion graphics",
+      "tipo": "tarea",
+      "obligatoriedad": "deseable"
+    }
+  ]
+}

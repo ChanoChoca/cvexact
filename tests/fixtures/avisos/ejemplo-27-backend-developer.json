@@ -1,0 +1,43 @@
+{
+  "id": "ejemplo-27-backend-developer",
+  "origen": "ejemplo",
+  "segmento": "tecnico",
+  "texto": "Backend Developer (Node.js) – Remoto LATAM\n\nBuscamos un/a Backend Developer para sumarse a nuestro equipo de producto.\n\nMust have:\n- 4+ años de experiencia con Node.js y TypeScript\n- Experiencia diseñando APIs REST\n- Bases de datos relacionales (PostgreSQL)\n- Git y code review\n\nNice to have:\n- Experiencia con AWS (Lambda, S3)\n- Conocimientos de Docker y Kubernetes\n- Inglés avanzado\n\nCómo trabajamos: remoto, horario flexible, equipo distribuido.",
+  "requisitos": [
+    {
+      "fragmento": "4+ años de experiencia con Node.js y TypeScript",
+      "tipo": "herramienta",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Experiencia diseñando APIs REST",
+      "tipo": "tarea",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Bases de datos relacionales (PostgreSQL)",
+      "tipo": "herramienta",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Git y code review",
+      "tipo": "herramienta",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Experiencia con AWS (Lambda, S3)",
+      "tipo": "herramienta",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "Conocimientos de Docker y Kubernetes",
+      "tipo": "herramienta",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "Inglés avanzado",
+      "tipo": "otro",
+      "obligatoriedad": "deseable"
+    }
+  ]
+}

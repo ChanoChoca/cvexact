@@ -1,0 +1,206 @@
+/*
+ * The presentation video's script. A sibling of prep-document.css and a
+ * separate template from the CV for the same reason: this is a working document
+ * read off a screen while recording, not a one-page deliverable an employer
+ * sees.
+ *
+ * What it does differently from the prep sheet: the spoken text is set larger
+ * and looser than body copy anywhere else in the app, because it is read aloud
+ * from a distance, and every block carries its time range in the heading so the
+ * candidate can glance at where they should be.
+ */
+
+.video-document {
+  --video-page-width: 595.28pt; /* A4 */
+  --video-pad-x: 42pt;
+  --video-pad-y: 40pt;
+
+  box-sizing: border-box;
+  width: var(--video-page-width);
+  padding: var(--video-pad-y) var(--video-pad-x);
+  margin: 0 auto;
+  background: #ffffff;
+  color: #16181d;
+  font-family: "STIX Two Text CV", Georgia, "Times New Roman", serif;
+  font-size: 11pt;
+  line-height: 1.5;
+}
+
+.video-document * {
+  box-sizing: border-box;
+}
+
+.video-document :where(p, ul, ol, li, h1, h2, h3) {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.video-title {
+  font-size: 18pt;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.video-subtitle {
+  margin-top: 3pt;
+  font-size: 11pt;
+  font-style: italic;
+  color: #55595f;
+}
+
+.video-meta {
+  margin-top: 10pt;
+  padding-top: 8pt;
+  border-top: 1pt solid #16181d;
+  font-size: 9pt;
+  color: #55595f;
+}
+
+.video-duration {
+  display: block;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #16181d;
+}
+
+.video-block {
+  margin-top: 20pt;
+}
+
+.video-block-heading {
+  font-size: 12pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding-bottom: 3pt;
+  border-bottom: 1pt solid #16181d;
+}
+
+/* Monospaced so the ranges line up down the page when they are skimmed. */
+.video-clock {
+  display: inline-block;
+  min-width: 76pt;
+  font-family: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace;
+  font-size: 9.5pt;
+  letter-spacing: 0;
+  color: #55595f;
+}
+
+/* The text that is actually spoken: the largest thing on the page. */
+.video-script {
+  margin-top: 8pt;
+  font-size: 12.5pt;
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+
+/*
+ * A block the candidate speaks around rather than reads. Set smaller and in
+ * italics so it cannot be mistaken for words to say — the whole failure mode
+ * this mode exists to prevent is someone reciting the guidance out loud.
+ */
+.video-outline {
+  margin-top: 3pt;
+  font-size: 10.5pt;
+  font-style: italic;
+  line-height: 1.5;
+  color: #55595f;
+  white-space: pre-wrap;
+}
+
+.video-keypoints {
+  margin-top: 8pt;
+  padding: 6pt 10pt;
+  background: #f2f4f7;
+  border-left: 2pt solid #55595f;
+  font-size: 10pt;
+}
+
+/*
+ * In an outline block the points carry the content, so they are set at reading
+ * size instead of as a footnote to a script that is not there.
+ */
+.video-keypoints.is-content {
+  font-size: 11.5pt;
+  line-height: 1.55;
+  background: #eef1f6;
+  border-left-color: #16181d;
+}
+
+.video-label {
+  font-size: 8.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #55595f;
+}
+
+.video-keypoints li,
+.video-tips li {
+  margin-left: 14pt;
+  padding-bottom: 2pt;
+}
+
+.video-keypoints li::before,
+.video-tips li::before {
+  content: "•   ";
+  display: inline-block;
+  min-width: 10pt;
+  margin-left: -10pt;
+}
+
+.video-tips {
+  margin-top: 8pt;
+  font-size: 10pt;
+  color: #55595f;
+}
+
+.video-page-frame {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  background: #525659;
+}
+
+.video-page-frame .video-document {
+  box-shadow: 0 2px 12px rgb(0 0 0 / 0.35);
+}
+
+@media print {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+  }
+
+  .video-page-frame {
+    display: block;
+    padding: 0;
+    background: none;
+  }
+
+  .video-page-frame .video-document {
+    box-shadow: none;
+  }
+
+  .video-document {
+    width: auto;
+    margin: 0;
+  }
+
+  /*
+   * A block is read as one unit while the camera runs, so it must not straddle
+   * a page break — turning the page mid-sentence is exactly the fumble this
+   * sheet exists to prevent.
+   */
+  .video-block {
+    break-inside: avoid;
+  }
+
+  .video-block-heading {
+    break-after: avoid;
+  }
+}

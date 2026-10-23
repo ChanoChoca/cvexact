@@ -1,0 +1,34 @@
+<!--
+  Fixture sintético de un aviso con JSON-LD `JobPosting`, la forma que
+  publican los ATS. El parser lee schema.org genérico, así que este fixture
+  cubre la misma ruta que Lever, Greenhouse y Ashby.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>IT Engineer Applications - Omega Labs</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "JobPosting",
+  "title": "IT Engineer Applications",
+  "description": "<p>We are looking for an IT Engineer to join our enterprise technology environment.</p><ul><li>Support internal applications</li></ul>",
+  "datePosted": "2026-08-31",
+  "employmentType": "Full-time",
+  "hiringOrganization": {
+    "@type": "Organization",
+    "name": "Omega Labs"
+  },
+  "jobLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Buenos Aires",
+      "addressCountry": "AR"
+    }
+  }
+}
+</script>
+</head>
+<body></body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "applications": 18,
+  "answers": 44,
+  "wordsPerAnswer": 77.95454545454545,
+  "understatedPerAnswer": 0,
+  "fabricatedPerAnswer": 0.4772727272727273,
+  "negativeOpenersPerAnswer": 0,
+  "selfDefeatingPerAnswer": 0,
+  "cvContradictionsPerAnswer": 0.13636363636363635,
+  "setsWithUnderstatement": 0,
+  "needsUserInput": 0,
+  "withShortAnswer": 0.45454545454545453
+}

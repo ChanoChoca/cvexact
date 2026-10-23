@@ -1,0 +1,43 @@
+{
+  "id": "ejemplo-03-electricista",
+  "origen": "ejemplo",
+  "segmento": "oficios",
+  "texto": "Electricista de obra\n\nConstructora mediana incorpora electricistas para obras en CABA.\n\nRequisitos excluyentes:\n- Matrícula de electricista habilitado\n- 3 años de experiencia en instalaciones eléctricas de obra\n- Lectura de planos eléctricos\n- Zona de residencia: CABA o GBA norte\n\nRequisitos deseables:\n- Conocimientos de AutoCAD\n- Curso de trabajo en altura\n- Manejo de multímetro y pinza amperométrica\n\nOfrecemos tareas en obras de largo plazo y ART desde el ingreso.",
+  "requisitos": [
+    {
+      "fragmento": "Matrícula de electricista habilitado",
+      "tipo": "credencial",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "3 años de experiencia en instalaciones eléctricas de obra",
+      "tipo": "tarea",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Lectura de planos eléctricos",
+      "tipo": "tarea",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Zona de residencia: CABA o GBA norte",
+      "tipo": "condicion",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Conocimientos de AutoCAD",
+      "tipo": "herramienta",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "Curso de trabajo en altura",
+      "tipo": "credencial",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "Manejo de multímetro y pinza amperométrica",
+      "tipo": "herramienta",
+      "obligatoriedad": "deseable"
+    }
+  ]
+}

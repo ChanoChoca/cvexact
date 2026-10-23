@@ -1,0 +1,23 @@
+{
+  "id": "ejemplo-29-ayudante-cocina-pizzeria",
+  "origen": "ejemplo",
+  "segmento": "oficios",
+  "texto": "se necesita ayudante de cocina para pizzeria en villa crespo. con experiencia en pizzeria o parrilla. disponibilidad full time, turno noche y fines de semana. buena onda y ganas de trabajar. se paga horas extras y propina. presentarse con cv de martes a viernes de 17 a 20 en corrientes 5300",
+  "requisitos": [
+    {
+      "fragmento": "experiencia en pizzeria o parrilla",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "disponibilidad full time, turno noche y fines de semana",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "buena onda y ganas de trabajar",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    }
+  ]
+}

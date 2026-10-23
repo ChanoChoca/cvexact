@@ -1,0 +1,38 @@
+{
+  "id": "ejemplo-06-peluquero",
+  "origen": "ejemplo",
+  "segmento": "oficios",
+  "texto": "Peluquero/a unisex - Caballito\n\nPeluquería de barrio busca profesional con experiencia en corte y color para sumarse al equipo. Debe manejar secador y plancha. Trato amable y puntualidad. Se valoran conocimientos de balayage. Trabajo de martes a sábado, con disponibilidad los sábados todo el día. Indispensable matrícula o título del curso de peluquería. Se ofrece comisión por servicio.",
+  "requisitos": [
+    {
+      "fragmento": "experiencia en corte y color",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Debe manejar secador y plancha",
+      "tipo": "herramienta",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Trato amable y puntualidad",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "conocimientos de balayage",
+      "tipo": "tarea",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "disponibilidad los sábados todo el día",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "matrícula o título del curso de peluquería",
+      "tipo": "credencial",
+      "obligatoriedad": "excluyente"
+    }
+  ]
+}

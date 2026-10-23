@@ -1,0 +1,40 @@
+name: Propuesta
+description: Una función o un cambio de comportamiento
+title: "[propuesta] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Las propuestas grandes se discuten antes de escribir código. Contá el
+        problema antes que la solución.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Qué problema resuelve
+      description: A quién le pasa, cuándo y qué hace hoy en su lugar.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Qué proponés
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas que consideraste
+  - type: textarea
+    id: scope
+    attributes:
+      label: Alcance
+      description: Qué queda adentro y qué queda afuera de esta propuesta.
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Restricciones del proyecto
+      options:
+        - label: La propuesta no requiere enviar el perfil ni los documentos a un servidor nuevo.
+        - label: La propuesta no depende de una API de pago obligatoria (la IA es opcional).
+        - label: La propuesta se puede implementar sin datos personales de terceros.

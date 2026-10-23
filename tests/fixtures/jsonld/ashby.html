@@ -1,0 +1,44 @@
+<!--
+  Igual salvedad que greenhouse-representative.html: las páginas de Ashby que
+  se pudieron alcanzar durante esta tarea (jobs.ashbyhq.com/<org>/<jobId>) son
+  una SPA sin JSON-LD server-side en el HTML crudo. Este fixture reconstruye
+  la forma documentada de Ashby (también schema.org JobPosting genérico, sin
+  campos propios) para ejercitar el mismo parser genérico que Lever ya probó
+  contra una página real. Se agrega `@graph` a propósito acá — Ashby es de
+  las plataformas que lo usa — para cubrir esa forma de anidamiento, que
+  Greenhouse/Lever no ejercitan.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product Designer - Beta Studio</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "JobPosting",
+      "title": "Product Designer",
+      "description": "Beta Studio busca una persona de Producto Design para nuestro equipo remoto.",
+      "datePosted": "2026-08-20",
+      "employmentType": "FULL_TIME",
+      "hiringOrganization": {
+        "@type": "Organization",
+        "name": "Beta Studio"
+      },
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Remoto",
+          "addressRegion": "AR"
+        }
+      },
+      "jobLocationType": "TELECOMMUTE"
+    }
+  ]
+}
+</script>
+</head>
+<body></body>
+</html>

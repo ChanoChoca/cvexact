@@ -1,0 +1,28 @@
+{
+  "id": "ejemplo-40-chofer-grupo",
+  "origen": "ejemplo",
+  "segmento": "oficios",
+  "texto": "BUSCAMOS CHOFER 🚚 \nZona: Quilmes/Bernal\nReq: carnet profesional (D1) al día, experiencia en reparto, conocer la zona sur, ser responsable. Hs: 7 a 16. \nPasar CV x mail o WhatsApp",
+  "requisitos": [
+    {
+      "fragmento": "carnet profesional (D1) al día",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "experiencia en reparto",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "conocer la zona sur",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "ser responsable",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    }
+  ]
+}

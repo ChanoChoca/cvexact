@@ -1,0 +1,164 @@
+/*
+ * Interview preparation sheet. A separate template from the CV on purpose: this
+ * is a working document read on a second screen during the interview, and it
+ * may run to several pages. The CV template's one-page constraints do not apply
+ * and its stylesheet is not touched.
+ */
+
+.prep-document {
+  --prep-page-width: 595.28pt; /* A4 */
+  --prep-pad-x: 42pt;
+  --prep-pad-y: 40pt;
+
+  box-sizing: border-box;
+  width: var(--prep-page-width);
+  padding: var(--prep-pad-y) var(--prep-pad-x);
+  margin: 0 auto;
+  background: #ffffff;
+  color: #16181d;
+  font-family: "STIX Two Text CV", Georgia, "Times New Roman", serif;
+  font-size: 10.5pt;
+  line-height: 1.45;
+}
+
+.prep-document * {
+  box-sizing: border-box;
+}
+
+.prep-document :where(p, ul, ol, li, h1, h2, h3) {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.prep-title {
+  font-size: 18pt;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.prep-subtitle {
+  margin-top: 3pt;
+  font-size: 11pt;
+  font-style: italic;
+  color: #55595f;
+}
+
+.prep-meta {
+  margin-top: 10pt;
+  padding-top: 8pt;
+  border-top: 1pt solid #16181d;
+  font-size: 9pt;
+  color: #55595f;
+}
+
+.prep-section {
+  margin-top: 22pt;
+}
+
+.prep-section-heading {
+  font-size: 12pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding-bottom: 3pt;
+  border-bottom: 1pt solid #16181d;
+}
+
+.prep-qa {
+  margin-top: 14pt;
+}
+
+.prep-question {
+  font-size: 11pt;
+  font-weight: 700;
+}
+
+.prep-answer {
+  margin-top: 4pt;
+}
+
+.prep-keypoints {
+  margin-top: 6pt;
+  padding: 6pt 10pt;
+  background: #f2f4f7;
+  border-left: 2pt solid #55595f;
+}
+
+.prep-label {
+  font-size: 8.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #55595f;
+}
+
+.prep-keypoints li,
+.prep-followups li,
+.prep-ask li {
+  margin-left: 14pt;
+  padding-bottom: 2pt;
+}
+
+.prep-keypoints li::before,
+.prep-followups li::before,
+.prep-ask li::before {
+  content: "•   ";
+  display: inline-block;
+  min-width: 10pt;
+  margin-left: -10pt;
+}
+
+.prep-followups {
+  margin-top: 5pt;
+  font-size: 9.5pt;
+  color: #55595f;
+}
+
+.prep-ask {
+  margin-top: 8pt;
+}
+
+.prep-page-frame {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  background: #525659;
+}
+
+.prep-page-frame .prep-document {
+  box-shadow: 0 2px 12px rgb(0 0 0 / 0.35);
+}
+
+@media print {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+  }
+
+  .prep-page-frame {
+    display: block;
+    padding: 0;
+    background: none;
+  }
+
+  .prep-page-frame .prep-document {
+    box-shadow: none;
+  }
+
+  .prep-document {
+    width: auto;
+    margin: 0;
+  }
+
+  /* A question and its answer must never straddle a page break. */
+  .prep-qa {
+    break-inside: avoid;
+  }
+
+  .prep-section-heading {
+    break-after: avoid;
+  }
+}

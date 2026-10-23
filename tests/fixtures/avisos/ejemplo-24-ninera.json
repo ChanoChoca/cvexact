@@ -1,0 +1,28 @@
+{
+  "id": "ejemplo-24-ninera",
+  "origen": "ejemplo",
+  "segmento": "oficios",
+  "texto": "Busco niñera para 2 nenes de 4 y 7 años, zona Caballito. Lunes a viernes de 14 a 20 hs. Que tenga experiencia con chicos, referencias comprobables y sea puntual. Preferentemente que sepa cocinar algo simple. Se paga bien. Escribir al privado.",
+  "requisitos": [
+    {
+      "fragmento": "experiencia con chicos",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "referencias comprobables",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "sea puntual",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Preferentemente que sepa cocinar algo simple",
+      "tipo": "tarea",
+      "obligatoriedad": "deseable"
+    }
+  ]
+}

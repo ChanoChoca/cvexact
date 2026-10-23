@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Plantilla de referencia · CV</title>
+    <!--
+      Espécimen de referencia del CV de este proyecto. El contenido es ficticio y las
+      medidas son las de docs/plantilla-cv.md: se abre al lado de /cv/demo/print para
+      comprobar que el renderer no se movió. No se edita el contenido para "mejorarlo":
+      los largos y la cantidad de viñetas son parte de la comprobación.
+    -->
+    <style>
+      @font-face {
+        font-family: "STIX Two Text CV";
+        font-style: normal;
+        font-weight: 400;
+        font-display: block;
+        src: url("/fonts/stix-two-text-regular-latin.woff2") format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+          U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "STIX Two Text CV";
+        font-style: normal;
+        font-weight: 700;
+        font-display: block;
+        src: url("/fonts/stix-two-text-bold-latin.woff2") format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+          U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "STIX Two Text CV";
+        font-style: italic;
+        font-weight: 400;
+        font-display: block;
+        src: url("/fonts/stix-two-text-regular-italic-latin.woff2") format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+          U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "STIX Two Text CV";
+        font-style: italic;
+        font-weight: 700;
+        font-display: block;
+        src: url("/fonts/stix-two-text-bold-italic-latin.woff2") format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+          U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      html {
+        background: #525659;
+      }
+
+      body {
+        margin: 0;
+        font-family: "STIX Two Text CV", "STIX Two Text", serif;
+      }
+
+      .cv-page-frame {
+        display: flex;
+        justify-content: center;
+        padding: 16px;
+      }
+
+      .cv-document {
+        --cv-page-width: 595.28pt;
+        --cv-page-height: 841.89pt;
+        --cv-pad-x: 28.4pt;
+        --cv-pad-top: 28.4pt;
+        --cv-pad-bottom: 14.2pt;
+        --cv-gap-after-contact: 7.1pt;
+        --cv-gap-after-heading: 9pt;
+        --cv-gap-between-entries: 12pt;
+        --cv-gap-before-heading: 12pt;
+        --cv-rule: 1pt solid #000000;
+
+        box-sizing: border-box;
+        width: var(--cv-page-width);
+        min-height: var(--cv-page-height);
+        padding: var(--cv-pad-top) var(--cv-pad-x) var(--cv-pad-bottom);
+        margin: 0 auto;
+        background: #ffffff;
+        color: #000000;
+        font-size: 11pt;
+        line-height: 1;
+        text-align: left;
+        hyphens: none;
+        overflow-wrap: anywhere;
+        font-variant-ligatures: none;
+        box-shadow: 0 2px 12px rgb(0 0 0 / 0.35);
+      }
+
+      .cv-document * {
+        box-sizing: border-box;
+      }
+      .cv-document :where(p, ul, li, h1, h2) {
+        margin: 0;
+        padding: 0;
+        font-size: inherit;
+        font-weight: inherit;
+        list-style: none;
+      }
+
+      .cv-name {
+        font-size: 24pt;
+        font-weight: 700;
+        text-align: center;
+        line-height: 1;
+      }
+
+      .cv-contact {
+        padding-top: 9pt;
+        padding-bottom: 9pt;
+        text-align: center;
+        font-size: 11pt;
+        font-weight: 400;
+        line-height: 1;
+        border-bottom: var(--cv-rule);
+      }
+
+      .cv-contact a {
+        color: #1155cc;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+      }
+
+      .cv-contact-line + .cv-contact-line {
+        margin-top: 2pt;
+      }
+
+      .cv-summary {
+        margin-top: var(--cv-gap-after-contact);
+        font-size: 10.5pt;
+        color: #0e0e0e;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 1.15;
+      }
+
+      .cv-section {
+        margin-top: var(--cv-gap-before-heading);
+      }
+
+      .cv-section-heading {
+        font-size: 12pt;
+        font-weight: 700;
+        line-height: 1;
+        padding-bottom: 2pt;
+        border-bottom: var(--cv-rule);
+        margin-bottom: var(--cv-gap-after-heading);
+      }
+
+      .cv-entry + .cv-entry {
+        margin-top: var(--cv-gap-between-entries);
+      }
+
+      .cv-entry-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12pt;
+      }
+
+      .cv-entry-left {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+
+      .cv-entry-right {
+        flex: 0 1 auto;
+        max-width: 45%;
+        text-align: right;
+      }
+
+      .cv-org {
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .cv-role {
+        font-weight: 400;
+        line-height: 1;
+      }
+
+      .cv-location {
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .cv-dates {
+        font-style: italic;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+
+      .cv-honors {
+        font-weight: 400;
+        line-height: 1;
+      }
+
+      .cv-honors-label {
+        font-weight: 400;
+      }
+      .cv-bullets {
+        margin-top: 4pt;
+      }
+
+      .cv-bullets li {
+        margin-left: 32.2pt;
+        padding-bottom: 3pt;
+        line-height: 1;
+        font-size: 11pt;
+        font-weight: 400;
+      }
+
+      .cv-bullets li::before {
+        content: "\002022   ";
+        display: inline-block;
+        min-width: 17.9pt;
+        margin-left: -17.9pt;
+        white-space: nowrap;
+      }
+
+      .cv-section-bullets li {
+        line-height: 1.0791666666666666;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      @media print {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+          background: #ffffff;
+        }
+
+        .cv-page-frame {
+          display: block;
+          padding: 0;
+        }
+
+        .cv-document {
+          width: auto;
+          min-height: auto;
+          margin: 0;
+          box-shadow: none;
+          -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+        }
+
+        .cv-entry,
+        .cv-section-heading {
+          break-inside: avoid;
+        }
+
+        .cv-section-heading {
+          break-after: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cv-page-frame">
+      <article class="cv-document" lang="es">
+        <h1 class="cv-name">Lucía Ferrer Molina</h1>
+
+        <div class="cv-contact">
+          <p class="cv-contact-line">
+            <span>Valencia, España</span> • <span>+34 600 00 00 00</span> •
+            <span><a href="mailto:lucia.ferrer.molina@example.com">lucia.ferrer.molina@example.com</a></span>
+          </p>
+          <p class="cv-contact-line">
+            <span><a href="https://www.linkedin.com/in/perfil-ejemplo/">linkedin.com/in/perfil-ejemplo</a></span> •
+            <span><a href="https://github.com/perfil-ejemplo">github.com/perfil-ejemplo</a></span> •
+            <span><a href="https://perfil-ejemplo.dev">perfil-ejemplo.dev</a></span>
+          </p>
+        </div>
+
+        <p class="cv-summary">
+          Desarrolladora de software con más de una década de experiencia en producto web. En
+          Nube Ámbar coordiné el frontend de tres productos, reduje un 35 % el tiempo de entrega
+          y acompañé a seis personas en su primer año. Doy charlas internas sobre accesibilidad y
+          revisión de código.
+        </p>
+        <section class="cv-section">
+          <h2 class="cv-section-heading">EXPERIENCIA PROFESIONAL</h2>
+
+          <div class="cv-entry">
+            <div class="cv-entry-header">
+              <div class="cv-entry-left">
+                <p class="cv-org">Nube Ámbar</p>
+                <p class="cv-role">Lead FrontEnd Architect</p>
+              </div>
+              <div class="cv-entry-right">
+                <p class="cv-location">Valencia, España</p>
+                <p class="cv-dates">Marzo 2018 – Octubre 2023</p>
+              </div>
+            </div>
+            <ul class="cv-bullets">
+              <li>Coordiné el frontend de tres productos y unifiqué su librería de componentes, lo que redujo el trabajo duplicado entre equipos y acortó las entregas en un 35 %.</li>
+              <li>Implementé un flujo de integración y despliegue continuos que bajó los errores en producción y llevó el tiempo de publicación de horas a minutos.</li>
+              <li>Impulsé la mejora del rendimiento web con presupuestos de carga, paneles de métricas y sesiones de revisión entre equipos.</li>
+              <li>Construí una herramienta compartida de consentimiento de cookies para todos los productos, alineada con la normativa de protección de datos.</li>
+              <li>Introduje prácticas acordadas por escrito —revisión en parejas, ramas cortas y despliegues graduales— y evalué alternativas de infraestructura para sostener el crecimiento.</li>
+            </ul>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-header">
+              <div class="cv-entry-left">
+                <p class="cv-org">Estudio Bruma</p>
+                <p class="cv-role">Desarrollador FullStack</p>
+              </div>
+              <div class="cv-entry-right">
+                <p class="cv-location">Oporto, Portugal</p>
+                <p class="cv-dates">Junio 2014 – Febrero 2018</p>
+              </div>
+            </div>
+            <ul class="cv-bullets">
+              <li>Puse en marcha la tienda en línea del estudio y su panel de pedidos, con pruebas automáticas y publicación semanal.</li>
+              <li>Reduje un 30 % el tiempo de carga del catálogo midiendo primero y optimizando después, sin reescribir la interfaz.</li>
+              <li>Documenté la arquitectura y acompañé a dos personas nuevas en sus primeras tareas de backend.</li>
+            </ul>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-entry-header">
+              <div class="cv-entry-left">
+                <p class="cv-org">Taller Pardo</p>
+                <p class="cv-role">Desarrollador FrontEnd</p>
+              </div>
+              <div class="cv-entry-right">
+                <p class="cv-location">Montevideo, Uruguay</p>
+                <p class="cv-dates">Enero 2011 – Mayo 2014</p>
+              </div>
+            </div>
+            <ul class="cv-bullets">
+              <li>Maqueté las primeras versiones del sitio y dejé una guía de estilos que el equipo siguió usando después.</li>
+              <li>Aprendí a trabajar con plazos cortos y a pedir revisión antes de publicar.</li>
+            </ul>
+          </div>
+        </section>
+        <section class="cv-section">
+          <h2 class="cv-section-heading">EDUCACIÓN</h2>
+
+          <div class="cv-entry">
+            <div class="cv-entry-header">
+              <div class="cv-entry-left">
+                <p class="cv-org">Escuela Superior de Ingeniería Delta</p>
+                <p class="cv-role">Ingeniería de Software</p>
+                <p class="cv-honors"><span class="cv-honors-label">Honores: </span>Beca de excelencia académica en el trabajo de fin de carrera</p>
+              </div>
+              <div class="cv-entry-right">
+                <p class="cv-location">Valencia, España</p>
+                <p class="cv-dates">Junio 2010</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="cv-section">
+          <h2 class="cv-section-heading">SKILLS ADICIONALES</h2>
+          <ul class="cv-bullets cv-section-bullets">
+            <li>Mantengo un blog técnico y doy charlas breves en encuentros locales sobre accesibilidad y rendimiento.</li>
+            <li>Nativo en Español y Catalán. Fluido en Inglés.</li>
+          </ul>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

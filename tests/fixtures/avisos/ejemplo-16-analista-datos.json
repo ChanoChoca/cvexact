@@ -1,0 +1,43 @@
+{
+  "id": "ejemplo-16-analista-datos",
+  "origen": "ejemplo",
+  "segmento": "tecnico",
+  "texto": "Analista de Datos Jr\n\nEmpresa de e-commerce busca analista de datos para el equipo de BI.\n\nBuscamos:\n- Título universitario en Estadística, Ingeniería o afines\n- SQL avanzado (excluyente)\n- Python (pandas) para análisis exploratorio\n- Experiencia en armado de dashboards con Power BI o Tableau\n- Capacidad analítica y orientación a resultados\n- Inglés técnico\n- Se valorará experiencia previa en e-commerce\n\nModalidad híbrida: 3 días en oficina de Núñez.",
+  "requisitos": [
+    {
+      "fragmento": "Título universitario en Estadística, Ingeniería o afines",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "SQL avanzado (excluyente)",
+      "tipo": "herramienta",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Python (pandas) para análisis exploratorio",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Experiencia en armado de dashboards con Power BI o Tableau",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Capacidad analítica y orientación a resultados",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Inglés técnico",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Se valorará experiencia previa en e-commerce",
+      "tipo": "tarea",
+      "obligatoriedad": "deseable"
+    }
+  ]
+}

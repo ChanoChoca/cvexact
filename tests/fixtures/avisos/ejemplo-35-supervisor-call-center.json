@@ -1,0 +1,38 @@
+{
+  "id": "ejemplo-35-supervisor-call-center",
+  "origen": "ejemplo",
+  "segmento": "administrativo",
+  "texto": "Supervisor/a de Call Center – Modalidad híbrida\n\nResponsabilidades:\n- Liderar un equipo de 15 asesores\n- Monitorear indicadores de calidad (AHT, NPS, CSAT)\n- Realizar feedback y coaching individual\n\nPerfil requerido:\n- Secundario completo (excluyente); terciario deseable\n- 2 años de experiencia como supervisor/a o líder de equipo en call center (excluyente)\n- Manejo de Excel intermedio/avanzado y herramientas de gestión de llamadas (Genesys, Avaya)\n- Excelente comunicación y capacidad de liderazgo\n- Disponibilidad para turnos rotativos de lunes a domingo",
+  "requisitos": [
+    {
+      "fragmento": "Secundario completo (excluyente)",
+      "tipo": "otro",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "terciario deseable",
+      "tipo": "otro",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "2 años de experiencia como supervisor/a o líder de equipo en call center (excluyente)",
+      "tipo": "tarea",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Manejo de Excel intermedio/avanzado y herramientas de gestión de llamadas (Genesys, Avaya)",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Excelente comunicación y capacidad de liderazgo",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Disponibilidad para turnos rotativos de lunes a domingo",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    }
+  ]
+}

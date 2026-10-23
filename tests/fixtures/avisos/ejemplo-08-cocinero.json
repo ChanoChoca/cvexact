@@ -1,0 +1,43 @@
+{
+  "id": "ejemplo-08-cocinero",
+  "origen": "ejemplo",
+  "segmento": "oficios",
+  "texto": "Cocinero/a de línea\n\nCervecería con cocina en vivo busca cocinero/a de línea para turno tarde-noche (de 16 a 00 hs).\n\nRequisitos:\n- Mínimo 1 año de experiencia en cocina de restaurante (excluyente)\n- Carnet de manipulación de alimentos (excluyente)\n- Conocimiento de cortes y cocciones de carnes\n- Manejo de plancha, freidora y parrilla\n- Capacidad para trabajar bajo presión\n- Disponibilidad para trabajar sábados, domingos y feriados\n\nNo excluyente: estudios en gastronomía.",
+  "requisitos": [
+    {
+      "fragmento": "Mínimo 1 año de experiencia en cocina de restaurante (excluyente)",
+      "tipo": "tarea",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Carnet de manipulación de alimentos (excluyente)",
+      "tipo": "credencial",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Conocimiento de cortes y cocciones de carnes",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Manejo de plancha, freidora y parrilla",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Capacidad para trabajar bajo presión",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Disponibilidad para trabajar sábados, domingos y feriados",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "No excluyente: estudios en gastronomía",
+      "tipo": "otro",
+      "obligatoriedad": "deseable"
+    }
+  ]
+}

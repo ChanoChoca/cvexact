@@ -1,0 +1,19 @@
+allowBuilds:
+  # drizzle-kit pulls esbuild in. Its install script only wires up the CLI shim;
+  # drizzle-kit uses the JS API, which resolves the binary from @esbuild/linux-x64
+  # at runtime. Left denied to match the posture of the entries below — flip to
+  # true if the drizzle-kit CLI ever fails to find its binary.
+  esbuild: false
+  onnxruntime-node: false
+  protobufjs: false
+  sharp: false
+  # tesseract.js (O18, the photo of a credential read in the browser): its install script only asks for donations
+  # (`opencollective-postinstall`), which nothing here needs. Denied, with the rest of the ones that only have a script to say.
+  tesseract.js: false
+  unrs-resolver: false
+  workerd: true
+minimumReleaseAgeExclude:
+  - '@ai-sdk/cohere@4.0.26'
+  - '@ai-sdk/mistral@4.0.28'
+  - '@ai-sdk/openai-compatible@3.0.29'
+  - '@ai-sdk/provider-utils@5.0.26'

@@ -1,0 +1,48 @@
+{
+  "id": "ejemplo-19-compras",
+  "origen": "ejemplo",
+  "segmento": "administrativo",
+  "texto": "Administrativo/a de Compras\n\nEmpresa industrial del Parque Industrial Pilar incorpora administrativo/a para el sector de compras.\n\nPerfil requerido:\nSecundario completo; excluyente tener experiencia en compras o administración de proveedores. Manejo de SAP módulo MM y Excel avanzado. Se valorará inglés para comunicación con proveedores del exterior. Se busca persona organizada, con capacidad de negociación. Horario de lunes a viernes de 8 a 17 hs. Es necesario contar con movilidad propia, o residir en Pilar o zonas aledañas, por la ubicación de la planta.",
+  "requisitos": [
+    {
+      "fragmento": "Secundario completo",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "excluyente tener experiencia en compras o administración de proveedores",
+      "tipo": "tarea",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Manejo de SAP módulo MM y Excel avanzado",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Se valorará inglés para comunicación con proveedores del exterior",
+      "tipo": "otro",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "persona organizada",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "capacidad de negociación",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "movilidad propia",
+      "tipo": "condicion",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "residir en Pilar o zonas aledañas",
+      "tipo": "condicion",
+      "obligatoriedad": "excluyente"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "ejemplo-23-asistente-estudio-juridico",
+  "origen": "ejemplo",
+  "segmento": "administrativo",
+  "texto": "IMPORTANTE ESTUDIO JURÍDICO – ZONA TRIBUNALES\n\nIncorporamos Asistente Administrativo/a\n\nREQUISITOS:\n1. Estudiante de Abogacía o carreras afines (excluyente)\n2. Manejo fluido de Word y Excel\n3. Experiencia previa en estudios jurídicos o mesa de entradas (se valorará)\n4. Redacción de escritos y cartas documento\n5. Proactividad, discreción y buena presencia\n6. Disponibilidad de lunes a viernes de 9 a 17 hs.\n\nSe ofrece: contrato por 3 meses con posibilidad de efectivización.\nRemuneración según convenio de empleados administrativos.",
+  "requisitos": [
+    {
+      "fragmento": "Estudiante de Abogacía o carreras afines (excluyente)",
+      "tipo": "otro",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Manejo fluido de Word y Excel",
+      "tipo": "herramienta",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Experiencia previa en estudios jurídicos o mesa de entradas (se valorará)",
+      "tipo": "tarea",
+      "obligatoriedad": "deseable"
+    },
+    {
+      "fragmento": "Redacción de escritos y cartas documento",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Proactividad, discreción",
+      "tipo": "rasgo",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "buena presencia",
+      "tipo": "otro",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Disponibilidad de lunes a viernes de 9 a 17 hs",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    }
+  ]
+}

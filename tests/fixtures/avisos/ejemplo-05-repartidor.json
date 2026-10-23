@@ -1,0 +1,28 @@
+{
+  "id": "ejemplo-05-repartidor",
+  "origen": "ejemplo",
+  "segmento": "oficios",
+  "texto": "Repartidor/a con moto propia - Zona Oeste\n\nBuscamos repartidores/as para entregas de pedidos en Morón, Haedo y Ramos Mejía.\n\nRequisitos:\n- Moto propia en condiciones (excluyente)\n- Licencia de conducir clase A.1 vigente y seguro al día\n- Disponibilidad de lunes a domingo en turnos de 4 horas\n- Experiencia previa en reparto\n\nBeneficios: pago semanal, bono por entregas e indumentaria.",
+  "requisitos": [
+    {
+      "fragmento": "Moto propia en condiciones (excluyente)",
+      "tipo": "condicion",
+      "obligatoriedad": "excluyente"
+    },
+    {
+      "fragmento": "Licencia de conducir clase A.1 vigente y seguro al día",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Disponibilidad de lunes a domingo en turnos de 4 horas",
+      "tipo": "condicion",
+      "obligatoriedad": "no_indicado"
+    },
+    {
+      "fragmento": "Experiencia previa en reparto",
+      "tipo": "tarea",
+      "obligatoriedad": "no_indicado"
+    }
+  ]
+}
